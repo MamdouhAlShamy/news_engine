@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-		@info = Story.find(:all)
+		@da = Story.find(:all)
 	end
 end
