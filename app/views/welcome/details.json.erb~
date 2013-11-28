@@ -1,0 +1,7 @@
+{
+"id": <%= @details.id.to_json.html_safe %>
+, "img": <%= story.img.to_json.html_safe %>
+, "title": <%= story.title.to_json.html_safe %>
+, "details": <%= story.details.to_json.html_safe %>
+}
+
