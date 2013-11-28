@@ -17,10 +17,19 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: news_development
   pool: 5
-  #username: news
-  password:
+  database: d2i6dile9979jn
+  username: egazxyhukviqab
+  password: v2xtXw66iNs_AB0paSgRU3j2Kz
+  host: ec2-23-21-94-137.compute-1.amazonaws.com
+  port: 5432
+  #adapter: postgresql
+  #encoding: unicode
+  ##database: news_development
+  #database: news
+  #pool: 5
+  #username: postgres
+  #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -46,15 +55,17 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: news_test
+#  database: news_test
+  database: news
   pool: 5
-  username: news
+  username: postgres
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: news_production
+  #database: news_production
+  database: news
   pool: 5
-  username: news
+  username: postgres
   password:
