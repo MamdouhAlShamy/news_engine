@@ -1,3 +1,5 @@
+require './app/controllers/stories_parser.rb'
+
 class WelcomeController < ApplicationController
 	def show
 		@details = Story.find(params[:id])
@@ -10,7 +12,8 @@ class WelcomeController < ApplicationController
 	end
 	
 	def parse
-		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
+		news_provider = "http://www.egyptindependent.com/rss_feed_term/192/rss_en.xml"
+		getStories(news_provider)
 	end
 	
 	def category
