@@ -1,0 +1,10 @@
+{"Categories":
+             [ 
+               <% @Categories.each_with_index do |category,index| %>
+	           { "id": <%= category.id.to_json.html_safe %>
+	           , "title": <%= category.title.to_json.html_safe %>
+	           }<% unless index== @Categories.count - 1%>,
+    <% end %>
+    <% end %>
+              ]
+}

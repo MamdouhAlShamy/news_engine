@@ -3,6 +3,8 @@ News::Application.routes.draw do
 	root 'welcome#index'
 	#resources :details
 	get 'details/:id' => 'welcome#show'
+	get 'parse' => 'welcome#parse'
+	get 'category' => 'welcome#category'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
