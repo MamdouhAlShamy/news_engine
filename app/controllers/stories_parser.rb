@@ -14,13 +14,13 @@ def getStories(news_provider, provider_id, category_id)
 #		puts getImageUrl(entry.url)
 #		puts getDetails(entry.url)
 	
-		 Story.create(:story_id => entry.url.split(pattern="/")[-1]
-		 , :provider_id => provider_id
-		 , :category_id => category_id
-		 , :title => entry.title
-		 , :details => getDetails(entry.url)
-		 , :img => getImageUrl(entry.url)
-		 , :url => entry.url)
+#		 Story.create(:story_id => entry.url.split(pattern="/")[-1]
+#		 , :provider_id => provider_id
+#		 , :category_id => category_id
+#		 , :title => entry.title
+#		 , :details => getDetails(entry.url)
+#		 , :img => getImageUrl(entry.url)
+#		 , :url => entry.url)
 		break		
 	end
 end
