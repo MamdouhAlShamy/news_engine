@@ -1,4 +1,4 @@
-require './app/controllers/stories_parser.rb'
+#require './app/controllers/stories_parser.rb'
 
 class WelcomeController < ApplicationController
 	def show

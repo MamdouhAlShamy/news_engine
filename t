@@ -1,101 +1,102 @@
-2013-11-29T22:41:17.000148+00:00 app[web.1]: 
-2013-11-29T22:41:17.000839+00:00 app[web.1]: 
-2013-11-29T22:41:16.999975+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `parse'
-2013-11-29T22:41:16.999975+00:00 app[web.1]: 
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `open'
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/stories_parser.rb:7:in `getStories'
-2013-11-29T22:41:17.000839+00:00 app[web.1]: Errno::ENOENT (No such file or directory - http://www.egyptindependent.com/node/2357141):
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/stories_parser.rb:7:in `each'
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `initialize'
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `getImageUrl'
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `block in getStories'
-2013-11-29T22:41:17.000839+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `parse'
-2013-11-29T22:41:17.000839+00:00 app[web.1]: 
-2013-11-29T22:41:17.001022+00:00 app[web.1]: 
-2013-11-29T23:04:58.854465+00:00 app[web.1]: Started GET "/category" for 41.239.143.56 at 2013-11-29 23:04:58 +0000
-2013-11-29T23:04:58.854465+00:00 app[web.1]: Started GET "/category" for 41.239.143.56 at 2013-11-29 23:04:58 +0000
-2013-11-29T23:04:58.856267+00:00 app[web.1]: Processing by WelcomeController#category as */*
-2013-11-29T23:04:58.856267+00:00 app[web.1]: Processing by WelcomeController#category as */*
-2013-11-29T23:04:58.904513+00:00 app[web.1]:   Rendered welcome/categories.json.erb (1.1ms)
-2013-11-29T23:04:58.904513+00:00 app[web.1]:   Rendered welcome/categories.json.erb (1.1ms)
-2013-11-29T23:04:58.904775+00:00 app[web.1]: Completed 200 OK in 48ms (Views: 15.7ms | ActiveRecord: 14.9ms)
-2013-11-29T23:04:58.904775+00:00 app[web.1]: Completed 200 OK in 48ms (Views: 15.7ms | ActiveRecord: 14.9ms)
-2013-11-29T23:04:58.916992+00:00 heroku[router]: at=info method=GET path=/category host=young-journey-4873.herokuapp.com fwd="41.239.143.56" dyno=web.1 connect=1ms service=71ms status=200 bytes=183
-2013-11-30T00:06:59.362539+00:00 heroku[web.1]: Idling
-2013-11-30T00:06:59.363045+00:00 heroku[web.1]: State changed from up to down
-2013-11-30T00:07:02.284493+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2013-11-30T00:07:03.016260+00:00 app[web.1]: 	/app/vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/server.rb:98:in `select'
-2013-11-30T00:07:03.016260+00:00 app[web.1]: [2013-11-30 00:07:03] ERROR SignalException: SIGTERM
-2013-11-30T00:07:12.750407+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
-2013-11-30T00:07:12.750525+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
-2013-11-30T00:07:14.835687+00:00 heroku[web.1]: Process exited with status 137
-2013-11-30T19:53:08.881086+00:00 heroku[web.1]: Unidling
-2013-11-30T19:53:08.881459+00:00 heroku[web.1]: State changed from down to starting
-2013-11-30T19:53:12.524769+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 25436 -e $RAILS_ENV`
-2013-11-30T19:53:16.620833+00:00 app[web.1]: [2013-11-30 19:53:16] INFO  WEBrick 1.3.1
-2013-11-30T19:53:16.620833+00:00 app[web.1]: [2013-11-30 19:53:16] INFO  ruby 1.9.3 (2013-11-22) [x86_64-linux]
-2013-11-30T19:53:16.621046+00:00 app[web.1]: [2013-11-30 19:53:16] INFO  WEBrick::HTTPServer#start: pid=2 port=25436
-2013-11-30T19:53:17.014090+00:00 heroku[web.1]: State changed from starting to up
-2013-11-30T19:53:17.972230+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2013-11-30T19:53:17.972230+00:00 app[web.1]: Started GET "/" for 197.162.0.67 at 2013-11-30 19:53:17 +0000
-2013-11-30T19:53:17.972230+00:00 app[web.1]: => Booting WEBrick
-2013-11-30T19:53:17.972230+00:00 app[web.1]: => Rails 4.0.1 application starting in production on http://0.0.0.0:25436
-2013-11-30T19:53:17.972230+00:00 app[web.1]: => Ctrl-C to shutdown server
-2013-11-30T19:53:17.972230+00:00 app[web.1]: Started GET "/" for 197.162.0.67 at 2013-11-30 19:53:17 +0000
-2013-11-30T19:53:18.082547+00:00 app[web.1]: Processing by WelcomeController#index as HTML
-2013-11-30T19:53:18.082547+00:00 app[web.1]: Processing by WelcomeController#index as HTML
-2013-11-30T19:53:18.174602+00:00 app[web.1]:   Rendered welcome/headlines.json.erb (1.2ms)
-2013-11-30T19:53:18.174602+00:00 app[web.1]:   Rendered welcome/headlines.json.erb (1.2ms)
-2013-11-30T19:53:18.175267+00:00 app[web.1]: Completed 200 OK in 92ms (Views: 3.9ms | ActiveRecord: 47.3ms)
-2013-11-30T19:53:18.175267+00:00 app[web.1]: Completed 200 OK in 92ms (Views: 3.9ms | ActiveRecord: 47.3ms)
-2013-11-30T19:53:18.178330+00:00 heroku[router]: at=info method=GET path=/ host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno=web.1 connect=2ms service=213ms status=200 bytes=692
-2013-11-30T20:59:02.793868+00:00 heroku[web.1]: Idling
-2013-11-30T20:59:02.796264+00:00 heroku[web.1]: State changed from up to down
-2013-11-30T20:59:05.122822+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2013-11-30T20:59:05.718223+00:00 app[web.1]: [2013-11-30 20:59:05] ERROR SignalException: SIGTERM
-2013-11-30T20:59:05.718223+00:00 app[web.1]: 	/app/vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/server.rb:98:in `select'
-2013-11-30T20:59:14.791729+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
-2013-11-30T20:59:14.791862+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
-2013-11-30T20:59:16.356978+00:00 heroku[web.1]: Process exited with status 137
-2013-11-30T21:42:58.670124+00:00 heroku[web.1]: Unidling
-2013-11-30T21:42:58.670124+00:00 heroku[web.1]: State changed from down to starting
-2013-11-30T21:43:02.017781+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 34240 -e $RAILS_ENV`
-2013-11-30T21:43:06.200360+00:00 app[web.1]: [2013-11-30 21:43:06] INFO  ruby 1.9.3 (2013-11-22) [x86_64-linux]
-2013-11-30T21:43:06.200360+00:00 app[web.1]: [2013-11-30 21:43:06] INFO  WEBrick 1.3.1
-2013-11-30T21:43:06.200472+00:00 app[web.1]: [2013-11-30 21:43:06] INFO  WEBrick::HTTPServer#start: pid=2 port=34240
-2013-11-30T21:43:06.483368+00:00 heroku[web.1]: State changed from starting to up
-2013-11-30T21:43:07.920331+00:00 app[web.1]: => Booting WEBrick
-2013-11-30T21:43:07.920331+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2013-11-30T21:43:07.920331+00:00 app[web.1]: Started GET "/parse" for 197.162.0.67 at 2013-11-30 21:43:07 +0000
-2013-11-30T21:43:07.920331+00:00 app[web.1]: Started GET "/parse" for 197.162.0.67 at 2013-11-30 21:43:07 +0000
-2013-11-30T21:43:07.920331+00:00 app[web.1]: => Rails 4.0.1 application starting in production on http://0.0.0.0:34240
-2013-11-30T21:43:07.920331+00:00 app[web.1]: => Ctrl-C to shutdown server
-2013-11-30T21:43:08.036323+00:00 app[web.1]: Processing by WelcomeController#parse as HTML
-2013-11-30T21:43:08.036323+00:00 app[web.1]: Processing by WelcomeController#parse as HTML
-2013-11-30T21:43:08.479331+00:00 app[web.1]: Completed 500 Internal Server Error in 443ms
-2013-11-30T21:43:08.480770+00:00 app[web.1]: 
-2013-11-30T21:43:08.478781+00:00 app[web.1]: Syrian forces 'retake Deir Attiyeh'
-2013-11-30T21:43:08.480770+00:00 app[web.1]: Errno::ENOENT (No such file or directory - http://www.egyptindependent.com/node/2357141):
-2013-11-30T21:43:08.478781+00:00 app[web.1]: http://www.egyptindependent.com/node/2357141
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `initialize'
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `open'
-2013-11-30T21:43:08.479331+00:00 app[web.1]: Completed 500 Internal Server Error in 443ms
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `block in getStories'
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/stories_parser.rb:7:in `getStories'
-2013-11-30T21:43:08.480957+00:00 app[web.1]: 
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `getImageUrl'
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/stories_parser.rb:7:in `each'
-2013-11-30T21:43:08.480770+00:00 app[web.1]: 
-2013-11-30T21:43:08.480957+00:00 app[web.1]: 
-2013-11-30T21:43:08.480957+00:00 app[web.1]: Errno::ENOENT (No such file or directory - http://www.egyptindependent.com/node/2357141):
-2013-11-30T21:43:08.480770+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `parse'
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `getImageUrl'
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/stories_parser.rb:7:in `getStories'
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/welcome_controller.rb:16:in `parse'
-2013-11-30T21:43:08.481114+00:00 app[web.1]: 
-2013-11-30T21:43:08.481114+00:00 app[web.1]: 
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `initialize'
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/stories_parser.rb:22:in `open'
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `block in getStories'
-2013-11-30T21:43:08.480957+00:00 app[web.1]:   app/controllers/stories_parser.rb:7:in `each'
-2013-11-30T21:43:09.038506+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno=web.1 connect=2ms service=7ms status=200 bytes=0
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/config.ru:3:in `block in <main>'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from bin/rails:4:in `require'
+2013-12-01T11:12:11.296712+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:40:in `parse_file'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:75:in `start'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `<top (required)>'
+2013-12-01T11:12:11.296552+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:465:in `block (2 levels) in eager_load!'
+2013-12-01T11:12:11.297114+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each_strongly_connected_component'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:199:in `app'
+2013-12-01T11:12:11.297114+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-12-01T11:12:11.297114+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:215:in `initialize!'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/config.ru:3:in `require'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+2013-12-01T11:12:11.297114+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:182:in `block in each_strongly_connected_component'
+2013-12-01T11:12:11.296712+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:462:in `each'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `tap'
+2013-12-01T11:12:11.297114+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from bin/rails:4:in `<main>'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/config.ru:in `new'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `eval'
+2013-12-01T11:12:11.297558+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:314:in `wrapped_app'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/config.ru:in `<main>'
+2013-12-01T11:12:11.297262+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+2013-12-01T11:12:12.492239+00:00 heroku[web.1]: Process exited with status 1
+2013-12-01T11:12:12.504620+00:00 heroku[web.1]: State changed from starting to crashed
+2013-12-01T11:17:49.641869+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/parse host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno= connect= service= status=503 bytes=
+2013-12-01T11:19:22+00:00 heroku[slug-compiler]: Slug compilation started
+2013-12-01T11:19:45.935313+00:00 heroku[api]: Deploy 305fa1f by mamdouh.al.shamy@gmail.com
+2013-12-01T11:19:45.958824+00:00 heroku[api]: Release v18 created by mamdouh.al.shamy@gmail.com
+2013-12-01T11:19:46+00:00 heroku[slug-compiler]: Slug compilation finished
+2013-12-01T11:19:46.581685+00:00 heroku[web.1]: State changed from crashed to starting
+2013-12-01T11:19:51.251547+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 38275 -e $RAILS_ENV`
+2013-12-01T11:19:56.557786+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:229:in `require': /app/app/controllers/stories_parser.rb:18: syntax error, unexpected ',', expecting ')' (SyntaxError)
+2013-12-01T11:19:56.556704+00:00 app[web.1]: => Booting WEBrick
+2013-12-01T11:19:56.556704+00:00 app[web.1]: => Rails 4.0.1 application starting in production on http://0.0.0.0:38275
+2013-12-01T11:19:56.556704+00:00 app[web.1]: => Ctrl-C to shutdown server
+2013-12-01T11:19:56.556704+00:00 app[web.1]: Exiting
+2013-12-01T11:19:56.556704+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2013-12-01T11:19:56.557972+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:21: syntax error, unexpected ',', expecting keyword_end
+2013-12-01T11:19:56.558137+00:00 app[web.1]: 		  ^
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		 , :details => getDetails(entry.url)
+2013-12-01T11:19:56.557972+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:22: syntax error, unexpected ',', expecting keyword_end
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		  ^
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		  ^
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		 , :provider_id => provider_id
+2013-12-01T11:19:56.558481+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:229:in `block in require'
+2013-12-01T11:19:56.558621+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1
+.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:214:in `load_dependency'
+2013-12-01T11:19:56.558370+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:23: syntax error, unexpected ')', expecting keyword_end
+2013-12-01T11:19:56.558830+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:330:in `require_or_load'
+2013-12-01T11:19:56.558971+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:289:in `depend_on'
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		  ^
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		 , :url => entry.url)
+2013-12-01T11:19:56.557972+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:23: syntax error, unexpected ',', expecting keyword_end
+2013-12-01T11:19:56.557972+00:00 app[web.1]: 		 , :img => getImageUrl(entry.url)
+2013-12-01T11:19:56.559700+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:347:in `eager_load!'
+2013-12-01T11:19:56.558728+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:229:in `require'
+2013-12-01T11:19:56.559377+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:464:in `block in eager_load!'
+2013-12-01T11:19:56.559476+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:462:in `each'
+2013-12-01T11:19:56.559597+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:462:in `eager_load!'
+2013-12-01T11:19:56.559899+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application/finisher.rb:56:in `block in <module:Finisher>'
+2013-12-01T11:19:56.559278+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:464:in `each'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+2013-12-01T11:19:56.559078+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:207:in `require_dependency'
+2013-12-01T11:19:56.559178+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:465:in `block (2 levels) in eager_load!'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:148:in `tsort_each'
+2013-12-01T11:19:56.559998+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:150:in `block in tsort_each'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:183:in `block (2 levels) in each_strongly_connected_component'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:219:in `each_strongly_connected_component_from'
+2013-12-01T11:19:56.559799+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application/finisher.rb:56:in `each'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each_strongly_connected_component'
+2013-12-01T11:19:56.560136+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:30:in `run'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/config.ru:3:in `block in <main>'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:215:in `initialize!'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/config/environment.rb:6:in `<top (required)>'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/config.ru:3:in `require'
+2013-12-01T11:19:56.560296+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:182:in `block in each_strongly_connected_component'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/config.ru:in `<main>'
+2013-12-01T11:19:56.561001+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:48:in `app'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+2013-12-01T11:19:56.561001+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `eval'
+2013-12-01T11:19:56.561001+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `new_from_string'
+2013-12-01T11:19:56.561001+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:40:in `parse_file'
+2013-12-01T11:19:56.561001+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:199:in `app'
+2013-12-01T11:19:56.561001+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:277:in `build_app_and_options_from_config'
+2013-12-01T11:19:56.561135+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:314:in `wrapped_app'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+2013-12-01T11:19:56.560472+00:00 app[web.1]: 	from /app/config.ru:in `new'
+2013-12-01T11:19:56.561135+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:76:in `block in <top (required)>'
+2013-12-01T11:19:56.561356+00:00 app[web.1]: 	from bin/rails:4:in `require'
+2013-12-01T11:19:56.561356+00:00 app[web.1]: 	from bin/rails:4:in `<main>'
+2013-12-01T11:19:56.561135+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:75:in `start'
+2013-12-01T11:19:56.561135+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `tap'
+2013-12-01T11:19:56.561356+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `<top (required)>'
+2013-12-01T11:19:58.377940+00:00 heroku[web.1]: Process exited with status 1
+2013-12-01T11:19:58.392079+00:00 heroku[web.1]: State changed from starting to crashed
+2013-12-01T11:21:07.759225+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno= connect= service= status=503 bytes=
+2013-12-01T11:21:13.087793+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno= connect= service= status=503 bytes=
