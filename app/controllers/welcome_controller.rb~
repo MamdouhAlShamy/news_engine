@@ -12,8 +12,8 @@ class WelcomeController < ApplicationController
 	end
 	
 	def parse
-		news_provider = "http://www.egyptindependent.com/rss_feed_term/192/rss_en.xml"
-		g = getStories(news_provider)
+		news_provider = "http://www.almasryalyoum.com/rss_feed_term/223241/rss.xml"
+		g = getStories(news_provider, 1, 1)
 	end
 	
 	def category

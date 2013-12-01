@@ -5,14 +5,23 @@ require 'feedzirra'
 require 'nokogiri'
 require 'open-uri'
 
-def getStories(news_provider) 
+def getStories(news_provider, provider_id, category_id) 
 	z = Feedzirra::Feed.fetch_and_parse(news_provider)
 	for  entry in z.entries
-		 puts entry.url
-		 puts entry.title
-		 puts getImageUrl(entry.url)
-		 puts getDetails(entry.url)
-		 puts entry.url.split(pattern="/")[-1]
+#		puts entry.url.split(pattern="/")[-1]
+#		puts entry.url
+#		puts entry.title
+#		puts getImageUrl(entry.url)
+#		puts getDetails(entry.url)
+=begin		
+		 Story.create(:story_id => entry.url.split(pattern="/")[-1]
+		 , :provider_id => provider_id
+		 , :category_id => category_id
+		 , :title => entry.title
+		 , :details => getDetails(entry.url)
+		 , :img => getImageUrl(entry.url)
+		 , :url => entry.url)
+=end
 		break		
 	end
 end
@@ -57,5 +66,5 @@ def getDetails(story_url) ## replace story_url w Id
 	end
 	
 end
-#news_provider = "http://www.egyptindependent.com/rss_feed_term/192/rss_en.xml"
-#getStories(news_provider)
+#news_provider = "http://www.almasryalyoum.com/rss_feed_term/223241/rss.xml"
+#getStories(news_provider,1,1)
