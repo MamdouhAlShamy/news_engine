@@ -1,4 +1,4 @@
-require './app/controllers/stories_parser.rb'
+#require './app/controllers/stories_parser.rb'
 
 class WelcomeController < ApplicationController
 	def show
@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
 		@Categories = Category.find(:all)
 		render :file => "welcome/categories.json.erb", :content_type => 'application/json'
 	end
-	
+
 	def newsOfCategory
 		@data = Story.find(params[:category_id])
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
