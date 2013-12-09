@@ -22,7 +22,7 @@ class WelcomeController < ApplicationController
 	end
 
 	def newsOfCategory
-		@data = Story.find(params[:category_id])
+		@headlines = Story.where(["category_id = ?", params[:id]])
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 end

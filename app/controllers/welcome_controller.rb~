@@ -20,12 +20,9 @@ class WelcomeController < ApplicationController
 		@Categories = Category.find(:all)
 		render :file => "welcome/categories.json.erb", :content_type => 'application/json'
 	end
-<<<<<<< HEAD
-	
+
 	def newsOfCategory
-		@data = Story.find(params[:category_id])
+		@headlines = Story.where(["name = ? and email = ?", "Joe", "joe@example.com"])
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
-=======
->>>>>>> 0b85b841d565052b362a2a7a31f1d58664abcf00
 end
