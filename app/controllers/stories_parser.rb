@@ -8,11 +8,11 @@ require 'open-uri'
 def getStories(news_provider, provider_id, category_id) 
 	z = Feedzirra::Feed.fetch_and_parse(news_provider)
 	for  entry in z.entries
-#		puts entry.url.split(pattern="/")[-1]
-#		puts entry.url
-#		puts entry.title
-#		puts getImageUrl(entry.url)
-#		puts getDetails(entry.url)
+		puts entry.url.split(pattern="/")[-1]
+		puts entry.url
+		puts entry.title
+		puts getImageUrl(entry.url)
+		puts getDetails(entry.url)
 	
 #		 Story.create(:story_id => entry.url.split(pattern="/")[-1]
 #		 , :provider_id => provider_id
@@ -21,7 +21,8 @@ def getStories(news_provider, provider_id, category_id)
 #		 , :details => getDetails(entry.url)
 #		 , :img => getImageUrl(entry.url)
 #		 , :url => entry.url)
-		break		
+
+#		break		
 	end
 end
 
@@ -65,5 +66,5 @@ def getDetails(story_url) ## replace story_url w Id
 	end
 	
 end
-#news_provider = "http://www.almasryalyoum.com/rss_feed_term/223241/rss.xml"
-#getStories(news_provider,1,1)
+news_provider = "http://www.almasryalyoum.com/rss_feed_term/223247/rss.xml"
+getStories(news_provider,1,2)
