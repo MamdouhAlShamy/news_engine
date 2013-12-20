@@ -1,4 +1,4 @@
-#require './app/controllers/stories_parser.rb'
+require './app/controllers/stories_parser.rb'
 
 class WelcomeController < ApplicationController
 	def show
@@ -12,8 +12,12 @@ class WelcomeController < ApplicationController
 	end
 	
 	def parse
-		news_provider = "http://www.almasryalyoum.com/rss_feed_term/223241/rss.xml"
-		g = getStories(news_provider, 1, 1)
+		# temp trial to get providers
+		@Categories  = Category.find(:all)
+		@Categories.each_with_index do |category|
+			puts category.rss_url
+			g = getStories(category.rss_url, category.provider_id, category.category_id)
+		end
 	end
 	
 	def category
@@ -24,5 +28,10 @@ class WelcomeController < ApplicationController
 	def newsOfCategory
 		@headlines = Story.where(["category_id = ?", params[:id]])
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
+	end
+	
+	def getListOfProviders
+		@Providers = Provider.find(:all)
+		render :file => "welcome/providers.json.erb", :content_type => 'application/json'
 	end
 end

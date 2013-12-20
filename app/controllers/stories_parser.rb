@@ -9,64 +9,84 @@ def getStories(news_provider, provider_id, category_id)
 	z = Feedzirra::Feed.fetch_and_parse(news_provider)
 	for  entry in z.entries
 
-#		puts entry.url.split(pattern="/")[-1]
+		if provider_id == 2 # Youm7
+			id = entry.url.split(pattern="=")[-1]
+		else
+			id = entry.url.split(pattern="/")[-1]
+		end
+		
+		image_and_details = getImageUrlAndDetails(entry.url, provider_id)	
+	
+### To test the parser from Terminal		
+#		puts id
 #		puts entry.url
 #		puts entry.title
-#		puts getImageUrl(entry.url)
-#		puts getDetails(entry.url)
+#		puts image_and_details[0]  #image url
+#		puts image_and_details[1]  #details
+#		puts entry.published
 	
-#		 Story.create(:story_id => entry.url.split(pattern="/")[-1]
-#		 , :provider_id => provider_id
-#		 , :category_id => category_id
-#		 , :title => entry.title
-#		 , :details => getDetails(entry.url)
-#		 , :img => getImageUrl(entry.url)
-#		 , :url => entry.url)
+		## Save into DB
+		Story.create(:story_id => id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_and_details[1], :img => image_and_details[0], :url => entry.url)
 
-		break		
+#		break		
 	end
 end
 
-def getImageUrl(story_url)
-## TODO that is made depending on El Masry el youm scheme
-	image_div_id = "views-slideshow-ddblock-field_associated_media_default"
-	image_div_class = "slide-inner clear-block border"
-	
+def getImageUrlAndDetails(story_url, provider_id)
 	story_content_html = Nokogiri::HTML(open(story_url))
-	image_url = story_content_html.css('div#'+ image_div_id + ' a').css('img').attribute('src').to_s
-	return image_url
-end
-
-def getDetails(story_url) ## replace story_url w Id
-	if story_url.include? "almasryalyoum"
+	## El Masry El Youm
+	if provider_id == 1
+		# Image Parsing
+		begin
+			image_div_id = "articleimg"
+			image_url = story_content_html.css('div.'+ image_div_id).css('img').attribute('src').to_s
+		rescue  
+   			image_url = "" 
+		end
+	
+		# Details Parsing
 		# get div with id 'arabic-news'
 		# from it get div class 'pane-content'
-		## TODO that is made depending on El Masry el youm scheme
-			details_div_id = "arabic-news"
-			details_div_class = "pane-content"
-			details_parent_div_class = "panel-pane pane-node-body"
+		details_div_id = "NewsStory"
+		details = story_content_html.css('div#'+ details_div_id).text.strip
+	#	puts details
 	
-			story_content_html = Nokogiri::HTML(open(story_url))
-			temp = story_content_html.css('div#'+ details_div_id)
-			details = temp.css('div.panel-pane.pane-node-body').text.strip
-		#	puts details
-			return details
-	#	Egyptindependent
-	elsif story_url.include? "egyptindependent"
-		# get div with id 'arabic-news'
-		# from it get div class 'pane-content'
-		details_div_id = "EI_news"
-		details_div_class = "pane-content"
-		details_parent_div_class = "panel-pane pane-node-body"
+		return [image_url, details]
 	
-		story_content_html = Nokogiri::HTML(open(story_url))
-		temp = story_content_html.css('div#'+ details_div_id)
-		details = temp.css('div.panel-pane.pane-node-body').text.strip
-
-		return details
+	## Youm7
+	elsif provider_id == 2
+		# Image Parsing
+		begin
+			image_div_id = "newsStoryImg"		
+			image_url = story_content_html.css('div#'+image_div_id).css('img').attribute('src').to_s
+		rescue  
+   			image_url = "" 
+		end
+		# Details Parsing
+		details_div_id = "newsStoryTxt"
+		details = story_content_html.css('div#'+details_div_id).css('p').text.strip
+		return [image_url, details]
+	
+	## El Watan
+	elsif provider_id == 3
+		# Image Parsing
+		begin  
+			image_div_class = "main_focus"		
+			image_url = story_content_html.css('div.'+image_div_class).css('img').attribute('src').to_s
+		rescue  
+   			image_url = "" 
+		end 
+		
+		# Details Parsing
+		details_div_class = "main_content_ip"
+		details = story_content_html.css('div.'+details_div_class).css('p').text.strip
+		return [image_url, details]
 	end
-	
 end
 
-#news_provider = "http://www.almasryalyoum.com/rss_feed_term/223241/rss.xml"
-#getStories(news_provider,1,1)
+#news_provider = "http://www.almasryalyoum.com/rss/RssFeeds?sectionId=3"
+#news_provider = "http://www.elwatannews.com/home/rssfeeds"
+#news_provider = "http://www.youm7.com/newfanrss.asp"
+#getStories(news_provider,3,2)
+
+#getStories(news_provider, 1, 1)

@@ -1,0 +1,12 @@
+{"Providers":
+             [ 
+               <% @Providers.each_with_index do |provider,index| %>
+	           { "provider_id": <%= provider.provider_id.to_json.html_safe %>
+	           , "name": <%= provider.name.to_json.html_safe %>
+	           , "url": <%= provider.url.to_json.html_safe %>
+	           , "img": <%= provider.img.to_json.html_safe %>
+	           }<% unless index== @Providers.count - 1%>,
+    <% end %>
+    <% end %>
+              ]
+}

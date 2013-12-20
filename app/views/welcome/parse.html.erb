@@ -1,0 +1,11 @@
+<% @Categories.each_with_index do |category| %>
+	           <p> id: <%= category.id %> <br>
+	           <p> Category_id: <%= category.category_id %> <br>
+	           <p> Provider_id: <%= category.provider_id %> <br>
+	           <p> RSS_url: <%= category.rss_url %> <br>
+	           <p> name: <%= category.name %> <br>
+    <% end %>
+<p>
+  Database updated <%= Time.now %>
+</p>
+
