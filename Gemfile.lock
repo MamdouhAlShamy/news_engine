@@ -1,5 +1,5 @@
 PATH
-  remote: ../../feedzirra
+  #remote: ../../feedzirra
   specs:
     feedzirra (0.5.0)
       curb (~> 0.8.1)
