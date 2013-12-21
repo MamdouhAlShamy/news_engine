@@ -2,7 +2,7 @@ News::Application.routes.draw do
 
 	root 'welcome#index'
 	#resources :details
-	get 'details/:id' => 'welcome#show'
+	get 'details/:id' => 'welcome#details'
 	# 
 	get 'parse' => 'welcome#parse'
 	# get list of categories

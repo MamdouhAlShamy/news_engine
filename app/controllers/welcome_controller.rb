@@ -1,8 +1,9 @@
 require './app/controllers/stories_parser.rb'
 
 class WelcomeController < ApplicationController
-	def show
+	def details
 		@details = Story.find(params[:id])
+		@related = Story.where(["story_id = ?", @details.relate1])
 		render :file => "welcome/details.json.erb", :content_type => 'application/json'
 	end
 	

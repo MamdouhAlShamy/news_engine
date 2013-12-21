@@ -1,101 +1,101 @@
-2013-12-01T11:34:07.615772+00:00 app[web.1]: 		  ^
-2013-12-01T11:34:07.616394+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:54:in `run_initializers'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/config.ru:3:in `block in <main>'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `new_from_string'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:48:in `app'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
-2013-12-01T11:34:07.616394+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:215:in `initialize!'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/config.ru:in `new'
-2013-12-01T11:34:07.616394+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:150:in `block in tsort_each'
-2013-12-01T11:34:07.615951+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:464:in `block in eager_load!'
-2013-12-01T11:34:07.615951+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:462:in `eager_load!'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `<top (required)>'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:76:in `block in <top (required)>'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:40:in `parse_file'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/config.ru:in `<main>'
-2013-12-01T11:34:07.616394+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:148:in `tsort_each'
-2013-12-01T11:34:07.616394+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from bin/rails:4:in `require'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from bin/rails:4:in `<main>'
-2013-12-01T11:34:07.615951+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:30:in `run'
-2013-12-01T11:34:07.616588+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `eval'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:75:in `start'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:277:in `build_app_and_options_from_config'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:199:in `app'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `tap'
-2013-12-01T11:34:07.616914+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:314:in `wrapped_app'
-2013-12-01T11:34:08.903486+00:00 heroku[web.1]: Process exited with status 1
-2013-12-01T11:34:08.915036+00:00 heroku[web.1]: State changed from starting to crashed
-2013-12-01T11:37:27.690386+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno= connect= service= status=503 bytes=
-2013-12-01T11:37:40.653459+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno= connect= service= status=503 bytes=
-2013-12-01T11:38:19.222966+00:00 heroku[web.1]: State changed from crashed to starting
-2013-12-01T11:38:23.280354+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 22572 -e $RAILS_ENV`
-2013-12-01T11:38:26.935879+00:00 app[web.1]: => Rails 4.0.1 application starting in production on http://0.0.0.0:22572
-2013-12-01T11:38:26.936812+00:00 app[web.1]: 		  ^
-2013-12-01T11:38:26.936812+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:21: syntax error, unexpected ',', expecting keyword_end
-2013-12-01T11:38:26.936812+00:00 app[web.1]: 		 , :details => getDetails(entry.url)
-2013-12-01T11:38:26.936812+00:00 app[web.1]: 		 , :img => getImageUrl(entry.url)
-2013-12-01T11:38:26.936812+00:00 app[web.1]: 		  ^
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:289:in `depend_on'
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:207:in `require_dependency'
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:465:in `block (2 levels) in eager_load!'
-2013-12-01T11:38:26.936812+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:23: syntax error, unexpected ',', expecting keyword_end
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 		 , :url => entry.url)
-2013-12-01T11:38:26.935879+00:00 app[web.1]: => Booting WEBrick
-2013-12-01T11:38:26.935879+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:347:in `eager_load!'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application/finisher.rb:56:in `each'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application/finisher.rb:56:in `block in <module:Finisher>'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:30:in `instance_exec'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:30:in `run'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
-2013-12-01T11:38:26.935879+00:00 app[web.1]: => Ctrl-C to shutdown server
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:150:in `block in tsort_each'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:183:in `block (2 levels) in each_strongly_connected_component'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:219:in `each_strongly_connected_component_from'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:182:in `block in each_strongly_connected_component'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:180:in `each_strongly_connected_component'
-2013-12-01T11:38:26.935879+00:00 app[web.1]: Exiting
-2013-12-01T11:38:26.936812+00:00 app[web.1]: /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:229:in `require': /app/app/controllers/stories_parser.rb:18: syntax error, unexpected ',', expecting ')' (SyntaxError)
-2013-12-01T11:38:26.936812+00:00 app[web.1]: 		 , :provider_id => provider_id
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/config/environment.rb:6:in `<top (required)>'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/config.ru:3:in `require'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/ruby-1.9.3/lib/ruby/1.9.1/tsort.rb:148:in `tsort_each'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/initializable.rb:54:in `run_initializers'
-2013-12-01T11:38:26.937613+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:215:in `initialize!'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/config.ru:3:in `block in <main>'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/config.ru:in `<main>'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/config.ru:in `new'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from bin/rails:4:in `require'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `tap'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `eval'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:49:in `new_from_string'
-2013-12-01T11:38:26.937811+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/builder.rb:40:in `parse_file'
-2013-12-01T11:38:26.936812+00:00 app[web.1]: 		  ^
-2013-12-01T11:38:26.936812+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:22: syntax error, unexpected ',', expecting keyword_end
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 		  ^
-2013-12-01T11:38:26.936993+00:00 app[web.1]: /app/app/controllers/stories_parser.rb:23: syntax error, unexpected ')', expecting keyword_end
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:229:in `block in require'
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:214:in `load_dependency'
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:229:in `require'
-2013-12-01T11:38:26.936993+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/dependencies.rb:330:in `require_or_load'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:464:in `each'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:464:in `block in eager_load!'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:462:in `each'
-2013-12-01T11:38:26.937174+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:462:in `eager_load!'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:277:in `build_app_and_options_from_config'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:199:in `app'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/server.rb:314:in `wrapped_app'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:48:in `app'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands/server.rb:75:in `start'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:76:in `block in <top (required)>'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/commands.rb:71:in `<top (required)>'
-2013-12-01T11:38:26.938066+00:00 app[web.1]: 	from bin/rails:4:in `<main>'
-2013-12-01T11:38:28.067163+00:00 heroku[web.1]: Process exited with status 1
-2013-12-01T11:38:28.078108+00:00 heroku[web.1]: State changed from starting to crashed
-2013-12-01T11:38:29.515632+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path=/ host=young-journey-4873.herokuapp.com fwd="197.162.0.67" dyno= connect= service= status=503 bytes=
+2013-12-20T18:07:01.234445+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:07:01.233364+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:07:01 +0000
+2013-12-20T18:07:01.240522+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.9ms)
+2013-12-20T18:07:01.240522+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.9ms)
+2013-12-20T18:07:01.239647+00:00 app[web.1]:   Rendered welcome/providers.json.erb (1.1ms)
+2013-12-20T18:07:01.239848+00:00 app[web.1]:   Rendered welcome/providers.json.erb (1.1ms)
+2013-12-20T18:07:01.249496+00:00 heroku[router]: at=info method=GET path=/provider host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=7ms service=16ms status=200 bytes=48
+2013-12-20T18:05:36.123902+00:00 heroku[web.1]: State changed from starting to up
+2013-12-20T18:33:35.505052+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:33:35 +0000
+2013-12-20T18:33:35.506297+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:33:35.505052+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:33:35 +0000
+2013-12-20T18:33:35.506297+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:33:35.526177+00:00 app[web.1]:   Rendered welcome/providers.json.erb (0.3ms)
+2013-12-20T18:33:35.526381+00:00 app[web.1]: Completed 200 OK in 20ms (Views: 1.1ms | ActiveRecord: 7.0ms)
+2013-12-20T18:33:35.526177+00:00 app[web.1]:   Rendered welcome/providers.json.erb (0.3ms)
+2013-12-20T18:33:35.526381+00:00 app[web.1]: Completed 200 OK in 20ms (Views: 1.1ms | ActiveRecord: 7.0ms)
+2013-12-20T18:33:35.535803+00:00 heroku[router]: at=info method=GET path=/provider host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=4ms service=30ms status=200 bytes=249
+2013-12-20T18:34:44.541570+00:00 app[web.1]:   Rendered welcome/providers.json.erb (0.2ms)
+2013-12-20T18:34:44.537856+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:34:44.541570+00:00 app[web.1]:   Rendered welcome/providers.json.erb (0.2ms)
+2013-12-20T18:34:44.535827+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:34:44 +0000
+2013-12-20T18:34:44.535827+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:34:44 +0000
+2013-12-20T18:34:44.537856+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:34:44.541993+00:00 app[web.1]: Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+2013-12-20T18:34:44.541993+00:00 app[web.1]: Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+2013-12-20T18:34:44.554682+00:00 heroku[router]: at=info method=GET path=/provider host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=1ms service=18ms status=200 bytes=456
+2013-12-20T18:35:50.415782+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:35:50.415782+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as HTML
+2013-12-20T18:35:50.414490+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:35:50 +0000
+2013-12-20T18:35:50.428251+00:00 heroku[router]: at=info method=GET path=/provider host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=1ms service=10ms status=200 bytes=659
+2013-12-20T18:35:50.414490+00:00 app[web.1]: Started GET "/provider" for 197.162.29.236 at 2013-12-20 18:35:50 +0000
+2013-12-20T18:35:50.419225+00:00 app[web.1]:   Rendered welcome/providers.json.erb (0.4ms)
+2013-12-20T18:35:50.419225+00:00 app[web.1]:   Rendered welcome/providers.json.erb (0.4ms)
+2013-12-20T18:35:50.419498+00:00 app[web.1]: Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.5ms)
+2013-12-20T18:35:50.419498+00:00 app[web.1]: Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.5ms)
+2013-12-20T18:38:23.909012+00:00 app[web.1]: Processing by WelcomeController#category as HTML
+2013-12-20T18:38:23.904613+00:00 app[web.1]: Started GET "/category" for 197.162.29.236 at 2013-12-20 18:38:23 +0000
+2013-12-20T18:38:23.904613+00:00 app[web.1]: Started GET "/category" for 197.162.29.236 at 2013-12-20 18:38:23 +0000
+2013-12-20T18:38:23.909012+00:00 app[web.1]: Processing by WelcomeController#category as HTML
+2013-12-20T18:38:23.913463+00:00 app[web.1]:   Rendered welcome/categories.json.erb (0.4ms)
+2013-12-20T18:38:23.913463+00:00 app[web.1]:   Rendered welcome/categories.json.erb (0.4ms)
+2013-12-20T18:38:23.913660+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.9ms)
+2013-12-20T18:38:23.913660+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 1.9ms)
+2013-12-20T18:38:23.922416+00:00 heroku[router]: at=info method=GET path=/category host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=1ms service=19ms status=304 bytes=0
+2013-12-20T18:42:20.719375+00:00 app[web.1]: Started GET "/category" for 197.162.29.236 at 2013-12-20 18:42:20 +0000
+2013-12-20T18:42:20.724404+00:00 app[web.1]:   Rendered welcome/categories.json.erb (0.3ms)
+2013-12-20T18:42:20.724404+00:00 app[web.1]:   Rendered welcome/categories.json.erb (0.3ms)
+2013-12-20T18:42:20.719375+00:00 app[web.1]: Started GET "/category" for 197.162.29.236 at 2013-12-20 18:42:20 +0000
+2013-12-20T18:42:20.724735+00:00 app[web.1]: Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.7ms)
+2013-12-20T18:42:20.720621+00:00 app[web.1]: Processing by WelcomeController#category as HTML
+2013-12-20T18:42:20.720778+00:00 app[web.1]: Processing by WelcomeController#category as HTML
+2013-12-20T18:42:20.724631+00:00 app[web.1]: Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 1.7ms)
+2013-12-20T18:42:20.735986+00:00 heroku[router]: at=info method=GET path=/category host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=1ms service=14ms status=200 bytes=400
+2013-12-20T18:43:12.158482+00:00 app[web.1]: Processing by WelcomeController#category as HTML
+2013-12-20T18:43:12.158482+00:00 app[web.1]: Processing by WelcomeController#category as HTML
+2013-12-20T18:43:12.157245+00:00 app[web.1]: Started GET "/category" for 197.162.29.236 at 2013-12-20 18:43:12 +0000
+2013-12-20T18:43:12.157245+00:00 app[web.1]: Started GET "/category" for 197.162.29.236 at 2013-12-20 18:43:12 +0000
+2013-12-20T18:43:12.253415+00:00 app[web.1]:   Rendered welcome/categories.json.erb (0.4ms)
+2013-12-20T18:43:12.253415+00:00 app[web.1]:   Rendered welcome/categories.json.erb (0.4ms)
+2013-12-20T18:43:12.274878+00:00 app[web.1]: Completed 200 OK in 116ms (Views: 32.5ms | ActiveRecord: 2.9ms)
+2013-12-20T18:43:12.274878+00:00 app[web.1]: Completed 200 OK in 116ms (Views: 32.5ms | ActiveRecord: 2.9ms)
+2013-12-20T18:43:12.295637+00:00 heroku[router]: at=info method=GET path=/category host=young-journey-4873.herokuapp.com fwd="197.162.29.236" dyno=web.1 connect=1ms service=137ms status=200 bytes=473
+2013-12-20T18:43:22.420941+00:00 app[web.1]: Started GET "/parse" for 197.162.29.236 at 2013-12-20 18:43:22 +0000
+2013-12-20T18:43:22.422219+00:00 app[web.1]: Started GET "/parse" for 197.162.29.236 at 2013-12-20 18:43:22 +0000
+2013-12-20T18:43:22.428486+00:00 app[web.1]: http://www.almasryalyoum.com/rss_feed_term/223241/rss.xml
+2013-12-20T18:43:22.426796+00:00 app[web.1]: Processing by WelcomeController#parse as HTML
+2013-12-20T18:43:22.423402+00:00 app[web.1]: Processing by WelcomeController#parse as HTML
+2013-12-20T18:43:23.537991+00:00 app[web.1]: : INSERT INTO "stories" ("category_id", "created_at", "details", "img", "provider_id", "story_id", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"
+2013-12-20T18:43:23.539384+00:00 app[web.1]: Completed 500 Internal Server Error in 1114ms
+2013-12-20T18:43:23.539384+00:00 app[web.1]: Completed 500 Internal Server Error in 1114ms
+2013-12-20T18:43:23.537991+00:00 app[web.1]: PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "stories_pkey"
+2013-12-20T18:43:23.537991+00:00 app[web.1]: PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "stories_pkey"
+2013-12-20T18:43:23.537991+00:00 app[web.1]: DETAIL:  Key (id)=(1) already exists.
+2013-12-20T18:43:23.537991+00:00 app[web.1]: DETAIL:  Key (id)=(1) already exists.
+2013-12-20T18:43:23.537991+00:00 app[web.1]: : INSERT INTO "stories" ("category_id", "created_at", "details", "img", "provider_id", "story_id", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"
+2013-12-20T18:43:23.541325+00:00 app[web.1]: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "stories_pkey"
+2013-12-20T18:43:23.541325+00:00 app[web.1]: DETAIL:  Key (id)=(1) already exists.
+2013-12-20T18:43:23.541325+00:00 app[web.1]:   app/controllers/stories_parser.rb:29:in `block in getStories'
+2013-12-20T18:43:23.541325+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `each'
+2013-12-20T18:43:23.541325+00:00 app[web.1]: : INSERT INTO "stories" ("category_id", "created_at", "details", "img", "provider_id", "story_id", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"):
+2013-12-20T18:43:23.541325+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `getStories'
+2013-12-20T18:43:23.541325+00:00 app[web.1]: 
+2013-12-20T18:43:23.541325+00:00 app[web.1]:   app/controllers/welcome_controller.rb:19:in `block in parse'
+2013-12-20T18:43:23.541480+00:00 app[web.1]: 
+2013-12-20T18:43:23.541480+00:00 app[web.1]: 
+2013-12-20T18:43:23.541480+00:00 app[web.1]: ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "stories_pkey"
+2013-12-20T18:43:23.541480+00:00 app[web.1]: 
+2013-12-20T18:43:23.541480+00:00 app[web.1]: DETAIL:  Key (id)=(1) already exists.
+2013-12-20T18:43:23.541325+00:00 app[web.1]:   app/controllers/welcome_controller.rb:17:in `each'
+2013-12-20T18:43:23.541480+00:00 app[web.1]:   app/controllers/welcome_controller.rb:17:in `parse'
+2013-12-20T18:43:23.541325+00:00 app[web.1]:   app/controllers/welcome_controller.rb:17:in `each_with_index'
+2013-12-20T18:43:23.541480+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `each'
+2013-12-20T18:43:23.541480+00:00 app[web.1]:   app/controllers/stories_parser.rb:10:in `getStories'
+2013-12-20T18:43:23.541646+00:00 app[web.1]:   app/controllers/welcome_controller.rb:19:in `block in parse'
+2013-12-20T18:43:23.541646+00:00 app[web.1]:   app/controllers/welcome_controller.rb:17:in `each'
+2013-12-20T18:43:23.541646+00:00 app[web.1]:   app/controllers/welcome_controller.rb:17:in `each_with_index'
+2013-12-20T18:43:23.541646+00:00 app[web.1]: 
+2013-12-20T18:43:23.541646+00:00 app[web.1]:   app/controllers/welcome_controller.rb:17:in `parse'
+2013-12-20T18:43:23.541646+00:00 app[web.1]: 
+2013-12-20T18:43:23.541480+00:00 app[web.1]: : INSERT INTO "stories" ("category_id", "created_at", "details", "img", "provider_id", "story_id", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"):
+2013-12-20T18:43:23.541480+00:00 app[web.1]:   app/controllers/stories_parser.rb:29:in `block in getStories'

@@ -6,12 +6,12 @@ URL in providers are made when user need to go to the page of the provider
 
 How to make new providers :
 
-1- create providers Table			(MODEL) <<DONE
+1- create providers Table			(MODEL) <<DONE <<HDONE
 2- fill table w 3 providers			(DATA ENTRY) <<DONE
 3- make JSON reply w providers		(VIEW) <<DONE
 4- put stories from new providers	(PARSER/Controller) << DONE
 5- create category table and fill it with data cats of 3 provider << DONE
-6- push to git
+6- push to git << DONE
 7- make from 1 till 5 on heroku
 
 

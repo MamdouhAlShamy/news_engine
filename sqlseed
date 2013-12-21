@@ -1,0 +1,17 @@
+insert into categories values(1, 1, 1, 'مصر', "http://www.almasryalyoum.com/rss/RssFeeds?sectionId=3","","2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into categories values(2, 2, 1, 'ثقافة', "http://www.almasryalyoum.com/rss/RssFeeds?sectionId=6","","2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into categories values(3, 2, 3, 'ثقافة', "http://youm7.com/newsakafarss.asp","","2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into categories values(4, 1, 2, 'مصر', "http://www.youm7.com/new3agelrss.asp","","2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into categories values(5, 1, 3, 'مصر', "http://www.elwatannews.com/home/rssfeeds","","2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into categories values(6, 2, 3, 'ثقافة', "http://www.elwatannews.com/home/rssfeeds?sectionId=+60","","2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into providers values(1, 1, 'المصرى اليوم', 'http://www.almasryalyoum.com/', 'http://i.imgur.com/tBhWApH.png?1',"2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into providers values(2, 2, 'اليوم السابع', 'http://www.youm7.com', 'http://www.youm7.com/images/graphics/logo.gif',"2010-11-16 14:12:22","2010-11-16 14:12:22");
+
+insert into providers values(3, 3, 'اليوم السابع', 'http://www.elwatannews.com/', 'http://www.elwatannews.com/content/gfx/logo.png',"2010-11-16 14:12:22","2010-11-16 14:12:22");

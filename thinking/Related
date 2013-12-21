@@ -1,0 +1,28 @@
+Related news
+## TODO
+1- JSON format << DONE
+2- Table of related topics << DONE
+I want ot make the table
+ a- a separate table
+ b- n-colums in story table 
+3- Related Parse <
+	EL MASRY EL YOUM << DONE
+	EL WATAN 
+	EL Youm 7
+4- Related Table fill << DONE
+5- get Stories of related
+
+
+Create a seed file for DB >> pro w arabic work around by injecting it from terminal
+
+refill Heroku DB
+
+"2010-11-16 14:12:22" sql accept it
+2013-12-21 09:47:50 UTC
+
+ISSUES:
+- Handle JSON if related is NULL
+- pRo w the position of related after the timedate << DONE
+- make createdTime has valid values
+- get info of related news <<
+
