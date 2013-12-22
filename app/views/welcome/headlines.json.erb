@@ -1,7 +1,7 @@
 {"headlines":
              [ 
                <% @headlines.each_with_index do |story,index| %>
-	           { "id": <%= story.id.to_json.html_safe %>
+	           { "id": <%= story.story_id.to_json.html_safe %>
 	           , "providerId": <%= story.provider_id.to_json.html_safe %>
 	           , "categoryId": <%= story.category_id.to_json.html_safe %>
 	           , "img": <%= story.img.to_json.html_safe %>

@@ -1,6 +1,10 @@
 =begin
 the purpose it to give the RSS link and get from it title, image, details ,url and Id and store into DB
 =end
+
+## TODO Thinking about Factory pattern
+## TODO DASH BOARD
+
 require 'feedzirra'
 require 'nokogiri'
 require 'open-uri'
@@ -15,21 +19,26 @@ def getStories(news_provider, provider_id, category_id)
 			story_id = entry.url.split(pattern="/")[-1]
 		end
 		
+		# escape already existing story
+		if Story.exists?(:story_id => story_id) #>
+			next
+		end
+		
 		image_details_and_related = getImageUrlAndDetails(entry.url, provider_id, category_id)
 		time = 	entry.published.to_s.split(" UTC")[0]
 	
 ### To test the parser from Terminal		
-		puts story_id
-		puts entry.url
-		puts entry.title
-		puts image_details_and_related[0]	# image url
-		puts image_details_and_related[1]	# details
-		puts image_details_and_related[2]	# related 1
-		puts image_details_and_related[3]	# related 2
-		puts time
+#		puts story_id
+#		puts entry.url
+#		puts entry.title
+#		puts image_details_and_related[0]	# image url
+#		puts image_details_and_related[1]	# details
+#		puts image_details_and_related[2]	# related 1
+#		puts image_details_and_related[3]	# related 2
+#		puts time
 	
 		## Save into DB
-		#Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3])
+		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3]) #>
 	
 	end
 end
@@ -43,13 +52,30 @@ def getStory(url, provider_id, category_id)
 		story_id = url.split(pattern="=")[-1]
 	else
 		story_id = url.split(pattern="/")[-1]
-	end 
+	end
+	
+	# not saving already exist story
+	if Story.exists?(:story_id => story_id) #>
+		return
+	end
 	
 	# Image, Details and related
 	image_details_and_related = getImageUrlAndDetails(url, provider_id, category_id)
 	
-	#return [story_id, image_details_and_related[4], image_details_and_related[0], image_details_and_related[1], image_details_and_related[2], image_details_and_related[3]]
-	return image_details_and_related[4]
+#	puts [story_id,
+#			image_details_and_related[4],	# title
+#	 		image_details_and_related[0],	# img	
+#			image_details_and_related[1],	# details
+#			image_details_and_related[2],	# related1
+#			image_details_and_related[3]]	# related2
+#	return [story_id,
+#			image_details_and_related[4],	# title
+#	 		image_details_and_related[0],	# img	
+#			image_details_and_related[1],	# details
+#			image_details_and_related[2],	# related1
+#			image_details_and_related[3]]	# related2
+			
+		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :url => url, :title => image_details_and_related[4], :details => image_details_and_related[1], :img => image_details_and_related[0], :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3])
 end
 
 
@@ -80,16 +106,18 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 			related_div_class = "ret_post"
 			related = story_content_html.css('div.'+ related_div_class).css('ul.side-nav a')
 			related1_id = related[0]['href'].split(pattern="/")[-1]
-			getStory("http://www.almasryalyoum.com/news/details/"+related1_id,1, category_id)
 			related2_id = related[1]['href'].split(pattern="/")[-1]
+			# get info or related news
+			getStory("http://www.almasryalyoum.com/news/details/"+related1_id,1, category_id)
+			getStory("http://www.almasryalyoum.com/news/details/"+related2_id,1, category_id)
 		rescue  
-			related1_id = ""
-			related2_id = ""
+			# no related news found
+			related1_id = 0
+			related2_id = 0
 		end
 		
 		## Title Parse
-		title_class = "tit_2"
-		title = story_content_html.css('title')
+		title = story_content_html.css('title').text.to_s.split(' | ')[0]
 		
 		return [image_url, details, related1_id, related2_id, title]
 	
@@ -132,4 +160,4 @@ end
 #getStories(news_provider, 2, 1)
 #puts getImageUrlAndDetails('http://www.youm7.com//News.asp?NewsID=1409065',2)
 
-puts getStory("http://www.almasryalyoum.com/news/details/359248",1,1)
+#getStory("http://www.almasryalyoum.com/news/details/359248",1,1)

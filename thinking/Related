@@ -1,4 +1,4 @@
-Related news
+,Related news
 ## TODO
 1- JSON format << DONE
 2- Table of related topics << DONE
@@ -10,7 +10,7 @@ I want ot make the table
 	EL WATAN 
 	EL Youm 7
 4- Related Table fill << DONE
-5- get Stories of related
+5- get Stories of related << DONE
 
 
 Create a seed file for DB >> pro w arabic work around by injecting it from terminal
@@ -21,8 +21,18 @@ refill Heroku DB
 2013-12-21 09:47:50 UTC
 
 ISSUES:
-- Handle JSON if related is NULL
+- Handle JSON if related is NULL << DONE
 - pRo w the position of related after the timedate << DONE
+- get info of related news << DONE
+- have a looping problem in DB storage << SEEMS to Be done
 - make createdTime has valid values
-- get info of related news <<
+- details json problem << DONE 
+	issue w the query in Cntrlr that made data returned as list
+- I started to use story_id by the best way is to use id as story_id may be the same from diff providers
+
+THOUGHTS ON STORY_DI
+saving 
+
+recall
+
 

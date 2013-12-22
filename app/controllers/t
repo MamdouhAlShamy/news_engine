@@ -1,1 +1,14 @@
-<title>تحقيقات «رفح الأولى»: مجموعتان من «حماس» نفذتا المذبحة | المصري اليوم</title>
+<% if @related1_story != 0 %>
+, "Related":[
+		{	
+			id: <%= @related1_story.story_id.to_json.html_safe %>
+			title: <%= @related1_story.title.to_json.html_safe %>
+			img: <%= @related1_story.img.to_json.html_safe %>
+		},
+		{	
+			id: <%= @related2_story.story_id.to_json.html_safe %>
+			title: <%= @related2_story.title.to_json.html_safe %>
+			img: <%= @related2_story.img.to_json.html_safe %>
+		}
+    ]
+<% end %>
