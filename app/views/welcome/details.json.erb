@@ -7,14 +7,14 @@
 <% if @related1_story != nil %>
 , "Related":[
 		{	
-			id: <%= @related1_story.story_id.to_json.html_safe %>
-			title: <%= @related1_story.title.to_json.html_safe %>
-			img: <%= @related1_story.img.to_json.html_safe %>
+			"id": <%= @related1_story.story_id.to_json.html_safe %>
+			,"title": <%= @related1_story.title.to_json.html_safe %>
+			,"img": <%= @related1_story.img.to_json.html_safe %>
 		},
 		{	
-			id: <%= @related2_story.story_id.to_json.html_safe %>
-			title: <%= @related2_story.title.to_json.html_safe %>
-			img: <%= @related2_story.img.to_json.html_safe %>
+			"id": <%= @related2_story.story_id.to_json.html_safe %>
+			,"title": <%= @related2_story.title.to_json.html_safe %>
+			,"img": <%= @related2_story.img.to_json.html_safe %>
 		}
     ]
 <% end %>
