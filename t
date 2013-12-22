@@ -1,102 +1,101 @@
-2013-12-22T11:11:18.169265+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:11:18.169265+00:00 heroku[web.1]: Process running mem=512M(100.0%)
-2013-12-22T11:11:40.322254+00:00 heroku[web.1]: Process running mem=512M(100.0%)
-2013-12-22T11:11:40.322532+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:12:24.438016+00:00 heroku[web.1]: Process running mem=512M(100.0%)
-2013-12-22T11:12:24.438016+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:12:46.317923+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:12:46.318205+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:13:08.172596+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:13:08.172892+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:13:52.434234+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:13:52.434234+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:14:14.244742+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:14:14.244742+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:14:58.203113+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:14:58.203113+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:15:08.910333+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/category/ host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=5ms service=30000ms status=503 bytes=0
-2013-12-22T11:15:42.375848+00:00 heroku[web.1]: Process running mem=512M
-(100.1%)
-2013-12-22T11:15:42.375848+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:16:04.162281+00:00 heroku[web.1]: Process running mem=512M(100.0%)
-2013-12-22T11:16:04.162281+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:15:40.047017+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/favicon.ico host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=0ms service=30000ms status=503 bytes=0
-2013-12-22T11:16:48.073544+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:16:48.073789+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:17:03.608846+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/category/ host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=0ms service=30002ms status=503 bytes=0
-2013-12-22T11:17:34.389019+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/favicon.ico host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=2ms service=30000ms status=503 bytes=0
-2013-12-22T11:17:32.387294+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:17:32.386974+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:17:54.502106+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:17:54.502106+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:18:33.489023+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/category/ host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=0ms service=30000ms status=503 bytes=0
-2013-12-22T11:18:38.444177+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:18:38.447126+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:19:05.219198+00:00 heroku[router]: at=error code=H12 desc="Request timeout" method=GET path=/favicon.ico host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=0ms service=30001ms status=503 bytes=0
-2013-12-22T11:19:22.415100+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:19:22.415372+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:19:46.463621+00:00 heroku[web.1]: Idling
-2013-12-22T11:19:46.464645+00:00 heroku[web.1]: State changed from up to down
-2013-12-22T11:19:44.198892+00:00 heroku[web.1]: Process running mem=512M(100.1%)
-2013-12-22T11:19:44.199371+00:00 heroku[web.1]: Error R14 (Memory quota exceeded)
-2013-12-22T11:19:51.587250+00:00 heroku[web.1]: Stopping all processes with SIGTERM
-2013-12-22T11:20:01.253153+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
-2013-12-22T11:20:01.253377+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
-2013-12-22T11:20:04.456439+00:00 heroku[web.1]: Process exited with status 137
-2013-12-22T11:32:50.692701+00:00 heroku[web.1]: Unidling
-2013-12-22T11:32:50.692998+00:00 heroku[web.1]: State changed from down to starting
-2013-12-22T11:32:53.992141+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 40565 -e $RAILS_ENV`
-2013-12-22T11:32:57.850015+00:00 app[web.1]: [2013-12-22 11:32:57] INFO  WEBrick 1.3.1
-2013-12-22T11:32:57.850015+00:00 app[web.1]: [2013-12-22 11:32:57] INFO  ruby 1.9.3 (2013-11-22) [x86_64-linux]
-2013-12-22T11:32:57.850203+00:00 app[web.1]: [2013-12-22 11:32:57] INFO  WEBrick::HTTPServer#start: pid=2 port=40565
-2013-12-22T11:32:58.096543+00:00 heroku[web.1]: State changed from starting to up
-2013-12-22T11:32:59.764914+00:00 app[web.1]: => Booting WEBrick
-2013-12-22T11:32:59.764914+00:00 app[web.1]: => Rails 4.0.1 application starting in production on http://0.0.0.0:40565
-2013-12-22T11:32:59.764914+00:00 app[web.1]: => Run `rails server -h` for more startup options
-2013-12-22T11:32:59.764914+00:00 app[web.1]: Started GET "/category/" for 196.219.215.105 at 2013-12-22 11:32:59 +0000
-2013-12-22T11:32:59.764914+00:00 app[web.1]: => Ctrl-C to shutdown server
-2013-12-22T11:32:59.764914+00:00 app[web.1]: Started GET "/category/" for 196.219.215.105 at 2013-12-22 11:32:59 +0000
-2013-12-22T11:32:59.840466+00:00 app[web.1]: Processing by WelcomeController#category as HTML
-2013-12-22T11:32:59.840466+00:00 app[web.1]: Processing by WelcomeController#category as HTML
-2013-12-22T11:32:59.881691+00:00 app[web.1]:   Rendered welcome/categories.json.erb (1.3ms)
-2013-12-22T11:32:59.881691+00:00 app[web.1]:   Rendered welcome/categories.json.erb (1.3ms)
-2013-12-22T11:32:59.882126+00:00 app[web.1]: Completed 200 OK in 41ms (Views: 3.5ms | ActiveRecord: 9.3ms)
-2013-12-22T11:32:59.882126+00:00 app[web.1]: Completed 200 OK in 41ms (Views: 3.5ms | ActiveRecord: 9.3ms)
-2013-12-22T11:33:03.128249+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=4ms service=7ms status=200 bytes=0
-2013-12-22T11:32:59.882898+00:00 heroku[router]: at=info method=GET path=/category/ host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=3ms service=127ms status=200 bytes=473
-2013-12-22T11:38:08.272225+00:00 app[web.1]: Started GET "/" for 196.219.215.105 at 2013-12-22 11:38:08 +0000
-2013-12-22T11:38:08.273814+00:00 app[web.1]: Processing by WelcomeController#index as HTML
-2013-12-22T11:38:08.272225+00:00 app[web.1]: Started GET "/" for 196.219.215.105 at 2013-12-22 11:38:08 +0000
-2013-12-22T11:38:08.273814+00:00 app[web.1]: Processing by WelcomeController#index as HTML
-2013-12-22T11:38:08.523479+00:00 app[web.1]:   Rendered welcome/headlines.json.erb (110.7ms)
-2013-12-22T11:38:08.523479+00:00 app[web.1]:   Rendered welcome/headlines.json.erb (110.7ms)
-2013-12-22T11:38:08.524012+00:00 app[web.1]: Completed 200 OK in 250ms (Views: 112.6ms | ActiveRecord: 71.7ms)
-2013-12-22T11:38:08.524012+00:00 app[web.1]: Completed 200 OK in 250ms (Views: 112.6ms | ActiveRecord: 71.7ms)
-2013-12-22T11:38:08.533767+00:00 heroku[router]: at=info method=GET path=/ host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=0ms service=267ms status=200 bytes=323922
-2013-12-22T11:48:34.095241+00:00 app[web.1]: Started GET "/category" for 196.219.215.105 at 2013-12-22 11:48:34 +0000
-2013-12-22T11:48:34.096681+00:00 app[web.1]: Processing by WelcomeController#category as */*
-2013-12-22T11:48:34.095241+00:00 app[web.1]: Started GET "/category" for 196.219.215.105 at 2013-12-22 11:48:34 +0000
-2013-12-22T11:48:34.096681+00:00 app[web.1]: Processing by WelcomeController#category as */*
-2013-12-22T11:48:34.106927+00:00 app[web.1]:   Rendered welcome/categories.json.erb (1.4ms)
-2013-12-22T11:48:34.106927+00:00 app[web.1]:   Rendered welcome/categories.json.erb (1.4ms)
-2013-12-22T11:48:34.107318+00:00 app[web.1]: Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.6ms)
-2013-12-22T11:48:34.107475+00:00 app[web.1]: Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 1.6ms)
-2013-12-22T11:48:34.106415+00:00 heroku[router]: at=info method=GET path=/category host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=1ms service=20ms status=200 bytes=473
-2013-12-22T11:48:43.134933+00:00 app[web.1]: Started GET "/" for 196.219.215.105 at 2013-12-22 11:48:43 +0000
-2013-12-22T11:48:43.134933+00:00 app[web.1]: Started GET "/" for 196.219.215.105 at 2013-12-22 11:48:43 +0000
-2013-12-22T11:48:43.138219+00:00 app[web.1]: Processing by WelcomeController#index as HTML
-2013-12-22T11:48:43.138219+00:00 app[web.1]: Processing by WelcomeController#index as HTML
-2013-12-22T11:48:43.614805+00:00 app[web.1]:   Rendered welcome/headlines.json.erb (153.2ms)
-2013-12-22T11:48:43.614805+00:00 app[web.1]:   Rendered welcome/headlines.json.erb (153.2ms)
-2013-12-22T11:48:43.615204+00:00 app[web.1]: Completed 200 OK in 477ms (Views: 157.0ms | ActiveRecord: 242.2ms)
-2013-12-22T11:48:43.615204+00:00 app[web.1]: Completed 200 OK in 477ms (Views: 157.0ms | ActiveRecord: 242.2ms)
-2013-12-22T11:48:43.630821+00:00 heroku[router]: at=info method=GET path=/ host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=1ms service=502ms status=200 bytes=323922
-2013-12-22T11:48:52.752999+00:00 app[web.1]: Started GET "/provider" for 196.219.215.105 at 2013-12-22 11:48:52 +0000
-2013-12-22T11:48:52.752999+00:00 app[web.1]: Started GET "/provider" for 196.219.215.105 at 2013-12-22 11:48:52 +0000
-2013-12-22T11:48:52.754792+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as */*
-2013-12-22T11:48:52.754792+00:00 app[web.1]: Processing by WelcomeController#getListOfProviders as */*
-2013-12-22T11:48:52.781844+00:00 app[web.1]:   Rendered welcome/providers.json.erb (1.8ms)
-2013-12-22T11:48:52.782243+00:00 app[web.1]: Completed 200 OK in 27ms (Views: 8.1ms | ActiveRecord: 4.6ms)
-2013-12-22T11:48:52.781844+00:00 app[web.1]:   Rendered welcome/providers.json.erb (1.8ms)
-2013-12-22T11:48:52.782283+00:00 app[web.1]: Completed 200 OK in 27ms (Views: 8.1ms | ActiveRecord: 4.6ms)
-2013-12-22T11:48:52.778315+00:00 heroku[router]: at=info method=GET path=/provider host=young-journey-4873.herokuapp.com fwd="196.219.215.105" dyno=web.1 connect=1ms service=34ms status=200 bytes=672
+2013-12-22T14:06:31.343678+00:00 app[web.1]: ActionView::MissingTemplate (Missing template welcome/parseCategory, application/parseCategory with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+2013-12-22T14:06:31.343678+00:00 app[web.1]: ):
+2013-12-22T14:06:31.343384+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+2013-12-22T14:06:31.343384+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+2013-12-22T14:06:31.343384+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+2013-12-22T14:06:31.343678+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/path_set.rb:46:in `find'
+2013-12-22T14:06:31.343678+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+2013-12-22T14:06:31.343678+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+2013-12-22T14:06:31.343678+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+2013-12-22T14:06:31.343678+00:00 app[web.1]:   * "/app/app/views"
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/lookup_context.rb:115:in `find'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:16:in `render'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+2013-12-22T14:06:31.343678+00:00 app[web.1]: 
+2013-12-22T14:06:31.343678+00:00 app[web.1]: 
+2013-12-22T14:06:31.343678+00:00 app[web.1]: 
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/template_renderer.rb:8:in `render'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_view/renderer/renderer.rb:23:in `render'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+2013-12-22T14:06:31.343826+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:97:in `render'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+2013-12-22T14:06:31.344146+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:189:in `process_action'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `block in instrument'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:403:in `_run__3632882513141056379__process_action__callbacks'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+2013-12-22T14:06:31.344302+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/notifications.rb:159:in `instrument'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-4.0.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/base.rb:136:in `process'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/abstract_controller/rendering.rb:44:in `process'
+2013-12-22T14:06:31.344631+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal.rb:195:in `dispatch'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_controller/metal.rb:231:in `block in action'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `each'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/journey/router.rb:59:in `call'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/routing/route_set.rb:680:in `call'
+2013-12-22T14:06:31.344789+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-4.0.1/lib/active_record/query_cache.rb:36:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activerecord-4.0.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+2013-12-22T14:06:31.345129+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:373:in `_run__1044010009198430413__call__callbacks'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `block in call'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+2013-12-22T14:06:31.345305+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:25:in `tagged'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/tagged_logging.rb:67:in `tagged'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/rack/logger.rb:20:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/actionpack-4.0.1/lib/action_dispatch/middleware/static.rb:64:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/engine.rb:511:in `call'
+2013-12-22T14:06:31.346124+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/railties-4.0.1/lib/rails/application.rb:97:in `call'
+2013-12-22T14:06:31.346288+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+2013-12-22T14:06:31.346288+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+2013-12-22T14:06:31.346288+00:00 app[web.1]:   vendor/bundle/ruby/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+2013-12-22T14:06:31.346288+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+2013-12-22T14:06:31.346288+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+2013-12-22T14:06:31.346288+00:00 app[web.1]:   vendor/ruby-1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+2013-12-22T14:06:31.346288+00:00 app[web.1]: 
+2013-12-22T14:06:31.346288+00:00 app[web.1]: 
