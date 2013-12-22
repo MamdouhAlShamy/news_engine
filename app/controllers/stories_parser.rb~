@@ -20,7 +20,7 @@ def getStories(news_provider, provider_id, category_id)
 		end
 		
 		# escape already existing story
-		if Story.exists?(:story_id => story_id) ##
+		if Story.exists?(:story_id => story_id) #>
 			next
 		end
 		
@@ -38,7 +38,7 @@ def getStories(news_provider, provider_id, category_id)
 #		puts time
 	
 		## Save into DB
-		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3])
+		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3]) #>
 	
 	end
 end
@@ -55,7 +55,7 @@ def getStory(url, provider_id, category_id)
 	end
 	
 	# not saving already exist story
-	if Story.exists?(:story_id => story_id)
+	if Story.exists?(:story_id => story_id) #>
 		return
 	end
 	
@@ -133,7 +133,15 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 		# Details Parsing
 		details_div_id = "newsStoryTxt"
 		details = story_content_html.css('div#'+details_div_id).css('p').text.strip
-		return [image_url, details]
+		
+		# Related Parsing
+		## TODO
+		# no related news found
+		related1_id = 0
+		related2_id = 0
+		
+		return [image_url, details,related1_id, related2_id]
+		
 	
 	## El Watan
 	elsif provider_id == 3
@@ -148,7 +156,14 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 		# Details Parsing
 		details_div_class = "main_content_ip"
 		details = story_content_html.css('div.'+details_div_class).css('p').text.strip
-		return [image_url, details]
+
+				# Related Parsing
+		## TODO
+		# no related news found
+		related1_id = 0
+		related2_id = 0
+		
+		return [image_url, details,related1_id, related2_id]
 	end
 end
 

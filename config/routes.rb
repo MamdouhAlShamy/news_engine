@@ -11,6 +11,8 @@ News::Application.routes.draw do
 	get 'category/:id' => 'welcome#newsOfCategory'
 	
 	get 'provider' => 'welcome#getListOfProviders'
+	
+	get '/category/parseCategory/:id' => 'welcome#parseCategory'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

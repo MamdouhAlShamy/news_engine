@@ -133,7 +133,15 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 		# Details Parsing
 		details_div_id = "newsStoryTxt"
 		details = story_content_html.css('div#'+details_div_id).css('p').text.strip
-		return [image_url, details]
+		
+		# Related Parsing
+		## TODO
+		# no related news found
+		related1_id = 0
+		related2_id = 0
+		
+		return [image_url, details,related1_id, related2_id]
+		
 	
 	## El Watan
 	elsif provider_id == 3
@@ -148,7 +156,14 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 		# Details Parsing
 		details_div_class = "main_content_ip"
 		details = story_content_html.css('div.'+details_div_class).css('p').text.strip
-		return [image_url, details]
+
+		# Related Parsing
+		## TODO
+		# no related news found
+		related1_id = 0
+		related2_id = 0
+		
+		return [image_url, details,related1_id, related2_id]
 	end
 end
 

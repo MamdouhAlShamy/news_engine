@@ -30,9 +30,16 @@ ISSUES:
 	issue w the query in Cntrlr that made data returned as list
 - I started to use story_id by the best way is to use id as story_id may be the same from diff providers
 
-THOUGHTS ON STORY_DI
-saving 
+SEEMS the heroku couldnt handle the nested relate news and showed 
+Process running mem=512M(100.0%)
+Error R14 (Memory quota exceeded)
 
-recall
+
+I want to stop the server
+
+Parse providers not masry <<
+unique categories << DONE
+url details , headlines
+provider name << DONE
 
 

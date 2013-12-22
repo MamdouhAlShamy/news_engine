@@ -19,13 +19,19 @@ class WelcomeController < ApplicationController
 		# temp trial to get providers
 		@Categories  = Category.find(:all)
 		@Categories.each_with_index do |category|
-			puts category.rss_url
-			g = getStories(category.rss_url, category.provider_id, category.category_id)
+			getStories(category.rss_url, category.provider_id, category.category_id)
 		end
 	end
 	
+	def parseCategory#
+		# temp trial to get providers
+		@Category  = Category.find(params[:id])
+		getStories(@Category.rss_url, @Category.provider_id, @Category.category_id)
+	end
+	
 	def category
-		@Categories = Category.find(:all)
+		#@Categories = Category.find(:all)
+		@Categories = Category.where(["provider_id = ?", 1]) #d
 		render :file => "welcome/categories.json.erb", :content_type => 'application/json'
 	end
 
