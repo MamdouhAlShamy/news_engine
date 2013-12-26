@@ -1,5 +1,6 @@
 News::Application.routes.draw do
 
+  get "sessions/new"
   	get "users/new"
 	root 'welcome#index'
 	#resources :details
@@ -15,9 +16,14 @@ News::Application.routes.draw do
 	
 	get '/category/parseCategory/:id' => 'welcome#parseCategory'
 	
+	# register
 	resources :users
 	get '/register' => 'users#new'
 
+	#login/out
+	resources :sessions, :only => [:new, :create, :destroy]
+	get 'login' => 'sessions#new'
+	get 'logout' => 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

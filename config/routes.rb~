@@ -1,5 +1,6 @@
 News::Application.routes.draw do
 
+  get "sessions/new"
   	get "users/new"
 	root 'welcome#index'
 	#resources :details

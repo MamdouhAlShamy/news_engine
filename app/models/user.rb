@@ -26,4 +26,14 @@ class User < ActiveRecord::Base
 	def encrypt_password
 		self.password = Digest::MD5.hexdigest(password)
 	end
+	
+	def self.validate_login(email, password)
+		user = User.find_by_email(email)
+		
+		if user && user.password == Digest::MD5.hexdigest(password)
+			user
+		else
+			nil
+		end
+	end
 end

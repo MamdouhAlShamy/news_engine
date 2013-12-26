@@ -1,0 +1,8 @@
+create controller of Sessions
+route to the login sessions 
+login view
+model validation 
+controller session creat, destroy
+route to logout
+application controller check login
+user view after login
