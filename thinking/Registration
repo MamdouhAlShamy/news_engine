@@ -1,0 +1,24 @@
+MVC
+1- Create a model
+first_name
+last_name
+email
+mobile_number
+password
+
+2- Views
+
+## Video Tut steps
+I create app
+created model, migrate
+created controllers (show, index, new)
+made route to index and new
+made View for new
+change model rb file to make mass db insertion and encrypt pass
+Succ/fail : in controller and in view to so the user the error
+
+Wut I want ?
+I want to till the Client wut to do 
+wut is happend after pressing Submit (GET/POST)
+
+

@@ -1,5 +1,6 @@
 News::Application.routes.draw do
 
+  	get "users/new"
 	root 'welcome#index'
 	#resources :details
 	get 'details/:id' => 'welcome#details'
@@ -13,6 +14,9 @@ News::Application.routes.draw do
 	get 'provider' => 'welcome#getListOfProviders'
 	
 	get '/category/parseCategory/:id' => 'welcome#parseCategory'
+	
+	resources :users
+	get '/register' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
