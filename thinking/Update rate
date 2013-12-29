@@ -1,0 +1,30 @@
+To achieve update rate:
+
+- Request to update news from server
+- Server internally parse news (not important now) <<
+	- related takes allot of time, so I need to stop the deapth of related news
+
+IDEA:
+Client will ask for HIS<ClientId> - as server will store for each user last update - and will send him the remaining news
+
+STEPS:
+- News time should be correct in db so update is meaningful
+wut made the time of data in db not saved cor rectly ?? << DONE
+- create account << DONE
+- make this account login << DONE
+- create a new colum(news_last_update) in Users Table with last time of update << DONE
+	- it is filled while registration w the time of registeration
+- when user request an update, I will check the his last update
+and send HIM only the last news newer than his last update << DONE
+- set User new LastUpdate with current time ><
+
+Wut is needed after 90% of the implementation:
+- Set user set User new LastUpdate with current time<<
+- make auto INTERNAL parser to feed the beast
+
+
+
+Problem w story parser, err w mass assignment, solved w story model
+For id 1-4 of category time saved correctly
+problem w elwatan as it save the time -2 (like GMT)
+I want to correct el watan time FAKES

@@ -23,4 +23,11 @@ wut is happend after pressing Submit (GET/POST)
 <SITE-LINK>/register
 Passed to Client
 
+I want to make it on Androi Client to see if anything from Server is needed
+ - Create UI
+ - Parse UI
+ - http client the data
+ - log the reply
+
+
 

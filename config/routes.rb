@@ -24,6 +24,9 @@ News::Application.routes.draw do
 	resources :sessions, :only => [:new, :create, :destroy]
 	get 'login' => 'sessions#new'
 	get 'logout' => 'sessions#destroy'
+	
+	get 'categoryTest/user' => 'sessions#getUpdateToUserDateCategoryHeadlines'
+	get 'user/updateCategory/:id' => 'sessions#getUpdateToUserDateCategoryHeadlines'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

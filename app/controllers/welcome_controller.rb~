@@ -19,14 +19,14 @@ class WelcomeController < ApplicationController
 		# temp trial to get providers
 		@Categories  = Category.find(:all)
 		@Categories.each_with_index do |category|
-			g = getStories(category.rss_url, category.provider_id, category.category_id)
+			getStories(category.rss_url, category.provider_id, category.category_id)
 		end
 	end
 	
 	def parseCategory#
 		# temp trial to get providers
 		@Category  = Category.find(params[:id])
-		g = getStories(@Category.rss_url, @Category.provider_id, @Category.category_id)
+		getStories(@Category.rss_url, @Category.provider_id, @Category.category_id)
 	end
 	
 	def category

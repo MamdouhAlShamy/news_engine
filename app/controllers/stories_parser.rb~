@@ -10,6 +10,7 @@ require 'nokogiri'
 require 'open-uri'
 
 def getStories(news_provider, provider_id, category_id) 
+	list_of_story_ids_added = []
 	z = Feedzirra::Feed.fetch_and_parse(news_provider)
 	for  entry in z.entries
 
@@ -19,13 +20,15 @@ def getStories(news_provider, provider_id, category_id)
 			story_id = entry.url.split(pattern="/")[-1]
 		end
 		
-		# escape already existing story
-		if Story.exists?(:story_id => story_id) #>
-			next
-		end
+		## escape already existing story
+		#if Story.exists?(:story_id => story_id) #>
+		#	next
+		#end
 		
 		image_details_and_related = getImageUrlAndDetails(entry.url, provider_id, category_id)
-		time = 	entry.published.to_s.split(" UTC")[0]
+#		time = 	entry.published.to_s.split(" UTC")[0]
+		puts story_id
+		puts entry.published
 	
 ### To test the parser from Terminal		
 #		puts story_id
@@ -38,9 +41,14 @@ def getStories(news_provider, provider_id, category_id)
 #		puts time
 	
 		## Save into DB
-		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3]) #>
+		#Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3]) #>
 	
+
+		list_of_story_ids_added.push(story_id)
+		break	
 	end
+	
+	return list_of_story_ids_added
 end
 
 
@@ -68,13 +76,7 @@ def getStory(url, provider_id, category_id)
 #			image_details_and_related[1],	# details
 #			image_details_and_related[2],	# related1
 #			image_details_and_related[3]]	# related2
-#	return [story_id,
-#			image_details_and_related[4],	# title
-#	 		image_details_and_related[0],	# img	
-#			image_details_and_related[1],	# details
-#			image_details_and_related[2],	# related1
-#			image_details_and_related[3]]	# related2
-			
+
 		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :url => url, :title => image_details_and_related[4], :details => image_details_and_related[1], :img => image_details_and_related[0], :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3])
 end
 
@@ -102,6 +104,7 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 	#	puts details
 	
 		## Related Parse
+
 		begin
 			related_div_class = "ret_post"
 			related = story_content_html.css('div.'+ related_div_class).css('ul.side-nav a')
@@ -140,7 +143,7 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 		related1_id = 0
 		related2_id = 0
 		
-		return [image_url, details,related1_id, related2_id]
+		return [image_url, details, related1_id, related2_id]
 		
 	
 	## El Watan
@@ -157,22 +160,23 @@ def getImageUrlAndDetails(story_url, provider_id, category_id)
 		details_div_class = "main_content_ip"
 		details = story_content_html.css('div.'+details_div_class).css('p').text.strip
 
-				# Related Parsing
+		# Related Parsing
 		## TODO
 		# no related news found
 		related1_id = 0
 		related2_id = 0
 		
-		return [image_url, details,related1_id, related2_id]
+		return [image_url, details, related1_id, related2_id]
 	end
 end
 
 #news_provider = "http://www.almasryalyoum.com/rss/RssFeeds?sectionId=3"
 #news_provider = "http://www.elwatannews.com/home/rssfeeds"
-#news_provider = "http://www.youm7.com/newfanrss.asp"
+news_provider = "http://www.youm7.com/newfanrss.asp"
+#news_provider = "http://www.elwatannews.com/home/rssfeeds?sectionId=+60"
 #getStories(news_provider,3,2)
 
-#getStories(news_provider, 2, 1)
+getStories(news_provider, 2, 1)
 #puts getImageUrlAndDetails('http://www.youm7.com//News.asp?NewsID=1409065',2)
 
 #getStory("http://www.almasryalyoum.com/news/details/359248",1,1)

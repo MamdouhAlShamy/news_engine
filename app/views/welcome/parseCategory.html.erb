@@ -1,0 +1,8 @@
+<p>
+  Category <%= @Category.category_id%> Provider <%= @Category.provider_id %> updated @ <%= Time.now %>
+</p>
+
+<% @list_of_story_ids_added.each_with_index do |story_id| %>
+	<p> story_id: <%= story_id %> <br>
+<% end %>
+

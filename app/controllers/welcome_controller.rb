@@ -26,7 +26,7 @@ class WelcomeController < ApplicationController
 	def parseCategory#
 		# temp trial to get providers
 		@Category  = Category.find(params[:id])
-		getStories(@Category.rss_url, @Category.provider_id, @Category.category_id)
+		@list_of_story_ids_added = getStories(@Category.rss_url, @Category.provider_id, @Category.category_id)
 	end
 	
 	def category
