@@ -4,10 +4,11 @@ class SessionsController < ApplicationController
   end
   
   def create
-  	user = User.validate_login(
+  	@user = User.validate_login(
   	params[:session][:email],
   	params[:session][:password]
   	)
+  	## WEB LOGIN
   	# if user entered correct login info redirect him to his page
   	if user
   		session[:user_id] = user.id
@@ -19,11 +20,21 @@ class SessionsController < ApplicationController
   	end
   end
   
+  ## MOBILE LOGIN
+  def createMobile
+    @user = User.validate_login(
+  	params[:session][:email],
+  	params[:session][:password]
+  	)
+  	render :file => "sessions/login_result.json.erb", :content_type => 'application/json'
+  end
+  
   def destroy
   	session[:user_id] = nil
  	redirect_to login_path	
   end
   
+  # UpdateRate
   def getUpdateToUserDateCategoryHeadlines
   	user_id = session[:user_id]
   	user = User.find_by(id: user_id)

@@ -18,12 +18,14 @@ News::Application.routes.draw do
 	
 	# register
 	resources :users
-	get '/register' => 'users#new'
+	get 'register' => 'users#new'		# web registration
+	post 'register' => 'users#create'	# mobile registration
 
 	#login/out
 	resources :sessions, :only => [:new, :create, :destroy]
 	get 'login' => 'sessions#new'
 	get 'logout' => 'sessions#destroy'
+	post 'login/mobile' => 'sessions#createMobile'
 	
 	get 'categoryTest/user' => 'sessions#getUpdateToUserDateCategoryHeadlines'
 	get 'user/updateCategory/:id' => 'sessions#getUpdateToUserDateCategoryHeadlines'

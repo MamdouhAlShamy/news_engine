@@ -29,5 +29,16 @@ I want to make it on Androi Client to see if anything from Server is needed
  - http client the data
  - log the reply
 
+* After AbdelRahman request to make the registration possible w url concatination
+ - 
+ 
+ Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"first_name"=>"man", "last_name"=>"human", "password"=>"[FILTERED]", "mobile_no"=>"121", "email"=>"human@earth.com"}, "commit"=>"Register"}
 
+Processing by UsersController#new as HTML
+  Parameters: {"user.first_name"=>"'ma'"}
+  
+  {"utf8":"✓", "user":{"first_name":"man", "last_name":"human", "password":"[FILTERED]", "mobile_no":"121", "email":"human@earth.com"}, "commit":"Register"}
+
+- after knowinthe the exact body of POST request. Succ/Fail Json should b generated
 

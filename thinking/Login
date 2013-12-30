@@ -6,3 +6,7 @@ controller session creat, destroy
 route to logout
 application controller check login
 user view after login
+
+{"utf8"=>"✓", "session"=>{"email"=>"test@news.com", "password"=>"[FILTERE]"}, "commit"=>"Login"}
+
+-- make a mobile login
