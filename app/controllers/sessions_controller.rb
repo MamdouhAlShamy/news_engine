@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-  	@user = User.validate_login(
+  	user = User.validate_login(
   	params[:session][:email],
   	params[:session][:password]
   	)
@@ -26,6 +26,9 @@ class SessionsController < ApplicationController
   	params[:session][:email],
   	params[:session][:password]
   	)
+  	if @user
+  		session[:user_id] = @user.id
+  	end
   	render :file => "sessions/login_result.json.erb", :content_type => 'application/json'
   end
   

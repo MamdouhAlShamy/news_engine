@@ -19,14 +19,15 @@ News::Application.routes.draw do
 	# register
 	resources :users
 	get 'register' => 'users#new'		# web registration
-	post 'register' => 'users#create'	# mobile registration
+	post 'register' => 'users#createMobile'	# mobile registration
 
 	#login/out
 	resources :sessions, :only => [:new, :create, :destroy]
 	get 'login' => 'sessions#new'
 	get 'logout' => 'sessions#destroy'
-	post 'login/mobile' => 'sessions#createMobile'
+	post 'login' => 'sessions#createMobile'
 	
+	# UpdateRate
 	get 'categoryTest/user' => 'sessions#getUpdateToUserDateCategoryHeadlines'
 	get 'user/updateCategory/:id' => 'sessions#getUpdateToUserDateCategoryHeadlines'
   # The priority is based upon order of creation: first created -> highest priority.
