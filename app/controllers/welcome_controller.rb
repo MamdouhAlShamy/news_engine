@@ -35,7 +35,8 @@ class WelcomeController < ApplicationController
 		render :file => "welcome/categories.json.erb", :content_type => 'application/json'
 	end
 
-	def newsOfCategory
+	# getHeadlines from Category from DB
+	def getNewsOfCategory
 		@headlines = Story.where(["category_id = ?", params[:id]])
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end

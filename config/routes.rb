@@ -10,7 +10,7 @@ News::Application.routes.draw do
 	# get list of categories
 	get 'category' => 'welcome#category'
 	# get news from category <Id>
-	get 'category/:id' => 'welcome#newsOfCategory'
+	get 'category/:id' => 'welcome#getNewsOfCategory'
 	
 	get 'provider' => 'welcome#getListOfProviders'
 	
