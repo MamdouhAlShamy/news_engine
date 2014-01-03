@@ -41,10 +41,14 @@ class SessionsController < ApplicationController
   def getUpdateToUserDateCategoryHeadlines
   	user_id = session[:user_id]
   	user = User.find_by(id: user_id)
-  	@headlines = Story.where(["created_at > ? and category_id = ?", user.LastUpdateTime, params[:id]])
+  	
+  	@headlines = Story.where(["created_at > ? and category_id = ?", user.LastUpdateTime, params[:category_id]])
   	render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
-  	## set user's LastUpdateTime to current time, it changes password !!!
+  	
+  	  	## set user's LastUpdateTime to current time, it changes password !!!
   	#user.LastUpdateTime = DateTime.now
   	#user.save
+  	user.update(LastUpdateTime: DateTime.now)
+
   end
 end

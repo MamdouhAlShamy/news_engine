@@ -18,13 +18,18 @@ wut made the time of data in db not saved cor rectly ?? << DONE
 and send HIM only the last news newer than his last update << DONE
 - set User new LastUpdate with current time ><
 
-Wut is needed after 90% of the implementation:
-- Set user set User new LastUpdate with current time<<
-- make auto INTERNAL parser to feed the beast
-
-
 
 Problem w story parser, err w mass assignment, solved w story model
 For id 1-4 of category time saved correctly
 problem w elwatan as it save the time -2 (like GMT)
 I want to correct el watan time FAKES
+
+I want the system automaticlly
+ - to avoid related topics now
+ 
+I want to make when the user register, LastUpdateTIme to yesterday << DONE
+
+Wut is needed after 90% of the implementation:
+- Set user set User new LastUpdate with current time<< DONE but w a bug in password saving in SQLite (TAKE CARE)
+- make auto INTERNAL parser to feed the beast
+

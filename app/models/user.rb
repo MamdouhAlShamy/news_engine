@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	require 'digest/md5'
 	
 	# atrr_accessible allows insertion into db via mass assignment
-	attr_accessible :email, :first_name, :last_name, :password, :mobile_no
+	attr_accessible :email, :first_name, :last_name, :password, :mobile_no, :LastUpdateTime
 	before_save :encrypt_password
 	
 	# VALIDATIONS
