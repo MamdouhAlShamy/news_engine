@@ -5,6 +5,7 @@ the purpose it to give the RSS link and get from it title, image, details ,url a
 ## TODO Thinking about Factory pattern
 ## TODO DASH BOARD
 
+
 require 'feedzirra'
 require 'nokogiri'
 require 'open-uri'
@@ -46,7 +47,7 @@ def getStories(news_provider, provider_id, category_id)
 	
 
 		list_of_story_ids_added.push(story_id)
-		break	
+		#break	
 	end
 	
 	return list_of_story_ids_added

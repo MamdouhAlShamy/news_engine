@@ -20,7 +20,7 @@ class WelcomeController < ApplicationController
 		@Categories  = Category.find(:all)
 		@Categories.each_with_index do |category|
 			getStories(category.rss_url, category.provider_id, category.category_id)
-		break
+		#break
 		end
 	end
 	

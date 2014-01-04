@@ -5,6 +5,7 @@ the purpose it to give the RSS link and get from it title, image, details ,url a
 ## TODO Thinking about Factory pattern
 ## TODO DASH BOARD
 
+
 require 'feedzirra'
 require 'nokogiri'
 require 'open-uri'
@@ -178,8 +179,8 @@ end
 #news_provider = "http://www.almasryalyoum.com/rss/RssFeeds?sectionId=3"
 #news_provider = "http://www.elwatannews.com/home/rssfeeds"
 #news_provider = "http://www.youm7.com/newfanrss.asp"
-news_provider = "http://www.elwatannews.com/home/rssfeeds?sectionId=+60"
-getStories(news_provider,3,2)
+#news_provider = "http://www.elwatannews.com/home/rssfeeds?sectionId=+60"
+#getStories(news_provider,3,2)
 
 #getStories(news_provider, 2, 1)
 #puts getImageUrlAndDetails('http://www.youm7.com//News.asp?NewsID=1409065',2)
