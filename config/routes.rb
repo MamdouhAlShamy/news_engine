@@ -11,6 +11,12 @@ News::Application.routes.draw do
 	get 'category' => 'welcome#category'
 	# get news from category <Id>
 	get 'category/:id' => 'welcome#getNewsOfCategory'
+	# get news from category ordered w providers
+	#resources :priority
+	#get	'/orderedCategory/:priority' => 'welcome#getCategoryOrderedByProviders'
+	get 'orderedCategory/:category_id' => 'welcome#getCategoryOrderedByProviders'
+	#get ':welcome/:getCategoryOrderedByProviders/:id' => 'welcome#getCategoryOrderedByProviders'
+	
 	
 	get 'provider' => 'welcome#getListOfProviders'
 	
