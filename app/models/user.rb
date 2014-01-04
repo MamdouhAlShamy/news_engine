@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 	
 	# atrr_accessible allows insertion into db via mass assignment
 	attr_accessible :email, :first_name, :last_name, :password, :mobile_no, :LastUpdateTime
-	before_save :encrypt_password
+	before_create :encrypt_password
 	
 	# VALIDATIONS
 	validates :first_name,

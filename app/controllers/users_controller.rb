@@ -4,10 +4,13 @@ class UsersController < ApplicationController
   end
   # action for new.html submit
   def createMobile
-  	@user = User.new(params[:user])
+  	@user = User.new(params[:user], LastUpdateTime: DateTime.yesterday.iso8601)
   	if @user.save
   		# set LastUpdate to yesterday
+  		#password = @user.password
+  		#puts password
   		@user.update(LastUpdateTime: DateTime.yesterday.iso8601)
+  		#@user.update(password: password)
   	end
   	# MOBILE registration
   	# interacting w the user to let him know that the reg is succ w json response 
