@@ -42,7 +42,7 @@ class SessionsController < ApplicationController
 	Rails.logger = Logger.new(STDOUT)
   	user_id = session[:user_id]
   	@user = User.find_by_id(user_id)
-  	logger.fatal "ERR #{@user}"
+  	logger.fatal "ERR #{@user.last_update_time.to_s}"
   	
   	#@headlines = Story.where(["created_at > ? and category_id = ?", @user.last_update_time, params[:category_id]])
   	#@user.update(last_update_time: DateTime.now)
