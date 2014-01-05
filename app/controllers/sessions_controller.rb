@@ -44,9 +44,9 @@ class SessionsController < ApplicationController
   	@user = User.find_by_id(user_id)
   	logger.fatal "ERR #{@user.last_update_time.to_s}"
   	
-  	#@headlines = Story.where(["created_at > ? and category_id = ?", @user.last_update_time, params[:category_id]])
-  	#@user.update(last_update_time: DateTime.now)
-  	#render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
+  	@headlines = Story.where(["created_at > ? and category_id = ?", @user.last_update_time, params[:category_id]])
+  	@user.update(last_update_time: DateTime.now)
+  	render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 
   end
 end
