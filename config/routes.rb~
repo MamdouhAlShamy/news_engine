@@ -20,7 +20,7 @@ News::Application.routes.draw do
 	
 	get 'provider' => 'welcome#getListOfProviders'
 	
-	get '/category/parseCategory/:category_id' => 'welcome#parseCategory'
+	get '/category/parseCategory/:id' => 'welcome#parseCategory'
 	
 	# register
 	resources :users
@@ -36,7 +36,9 @@ News::Application.routes.draw do
 	# UpdateRate
 	resources :category_id
 	get 'categoryTest/user' => 'sessions#getUpdateToUserDateCategoryHeadlines'
-	get 'user/updateCategory/:category_id' => 'sessions#getUpdateToUserDateCategoryHeadlines'
+	#get 'user/updateCategory/:category_id' => 'sessions#getUpdateToUserDateCategoryHeadlines' # commented due 2 last_update_time postgre Glitchs
+	
+	get 'user/updateCategory/:category_id' => 'getRecentStories'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

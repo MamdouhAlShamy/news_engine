@@ -59,4 +59,9 @@ class WelcomeController < ApplicationController
 		@Providers = Provider.find(:all)
 		render :file => "welcome/providers.json.erb", :content_type => 'application/json'
 	end
+	
+	def getRecentStories
+		@headlines = Story.where(["category_id = ?", params[:category_id]]).order(:created_at).limit(50)
+  		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
+	end
 end

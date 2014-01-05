@@ -41,12 +41,14 @@ class SessionsController < ApplicationController
   def getUpdateToUserDateCategoryHeadlines
 	Rails.logger = Logger.new(STDOUT)
   	user_id = session[:user_id]
+  	puts user_id
   	@user = User.find_by_id(user_id)
+  	puts @user.class
   	logger.fatal "ERR #{@user.last_update_time.to_s}"
-  	
-  	@headlines = Story.where(["created_at > ? and category_id = ?", @user.last_update_time, params[:category_id]])
+  	## may b 
+  	c = @user.last_update_time
+  	@headlines = Story.where(["created_at > ? and category_id = ?", c, params[:category_id]])
   	@user.update(last_update_time: DateTime.now)
   	render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
-
   end
 end
