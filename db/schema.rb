@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228190727) do
+ActiveRecord::Schema.define(version: 20140105053955) do
 
   create_table "categories", force: true do |t|
     t.integer  "category_id"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20131228190727) do
     t.integer  "mobile_no"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "LastUpdateTime"
+    t.datetime "last_update_time"
   end
 
 end
