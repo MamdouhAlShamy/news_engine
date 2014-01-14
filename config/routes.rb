@@ -11,6 +11,8 @@ News::Application.routes.draw do
 	get 'category' => 'welcome#category'
 	# get news from category <Id>
 	get 'category/:id' => 'welcome#getNewsOfCategory'
+	
+	# ORDERED PROVIDERS
 	# get news from category ordered w providers
 	#resources :priority
 	#get	'/orderedCategory/:priority' => 'welcome#getCategoryOrderedByProviders'
@@ -39,6 +41,13 @@ News::Application.routes.draw do
 	#get 'user/updateCategory/:category_id' => 'sessions#getUpdateToUserDateCategoryHeadlines' # commented due 2 last_update_time postgre Glitchs
 	
 	get 'user/updateCategory/:category_id' => 'welcome#getRecentStories'
+	
+	# mark as read
+	# Session independent mark as read
+	get 'readTest/:user_id' => 'welcome#setStoryRead'
+	# session dep
+	get 'readTestSession/:story_id' => 'sessions#setStoryRead'
+	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

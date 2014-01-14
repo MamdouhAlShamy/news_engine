@@ -64,4 +64,12 @@ class WelcomeController < ApplicationController
 		@headlines = Story.where(["category_id = ?", params[:category_id]]).order(:created_at).limit(50)
   		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
+	
+	def setStoryRead
+		story_id = params[:story_id]
+		user_id = params[:user_id]
+		Read.create(user_id: user_id, story_id: story_id)
+		render :file => "sessions/read.json.erb", :content_type => 'application/json'
+		
+	end
 end

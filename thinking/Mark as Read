@@ -1,0 +1,11 @@
+how to mark story as read by a certain user !
+wut kind of database schema is the best for that
+
+I want to create read model
+
+how to tell that user X read story Y
+WIKI
+http://localhost:3000/readTestSession/<story_id>
+http://localhost:3000/readTest/<user_id>?story_id=<story_id>
+- STORE in DB>DONE
+- how to request if 

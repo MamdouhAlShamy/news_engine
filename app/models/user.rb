@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 	require 'digest/md5'
+	has_many :reads
+    has_many :stories, through: :reads
 	
 	# atrr_accessible allows insertion into db via mass assignment
 	attr_accessible :email, :first_name, :last_name, :password, :mobile_no, :last_update_time

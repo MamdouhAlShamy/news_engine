@@ -51,4 +51,14 @@ class SessionsController < ApplicationController
   	@user.update(last_update_time: DateTime.now)
   	render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
   end
+  
+  # mark as read
+  def setStoryRead
+  	user_id = session[:user_id]
+  	story_id = params[:story_id]
+  	puts user_id
+  	puts story_id
+  	Read.create(user_id: user_id, story_id: story_id)
+	render :file => "sessions/read.json.erb", :content_type => 'application/json'
+  end
 end
