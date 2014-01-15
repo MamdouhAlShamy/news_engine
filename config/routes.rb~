@@ -46,7 +46,9 @@ News::Application.routes.draw do
 	# Session independent mark as read
 	get 'readTest/:user_id' => 'welcome#setStoryRead'
 	# session dep
-	get 'readTest/:story_id' => 'sessions#setStoryRead'
+	get 'readTestSession/:story_id' => 'sessions#setStoryRead'
+	
+	get '/users' => 'users#getUsers'
 	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

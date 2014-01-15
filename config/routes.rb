@@ -48,6 +48,8 @@ News::Application.routes.draw do
 	# session dep
 	get 'readTestSession/:story_id' => 'sessions#setStoryRead'
 	
+	get '/listUsers' => 'users#getUsers'
+	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

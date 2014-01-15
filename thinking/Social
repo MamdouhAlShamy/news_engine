@@ -1,0 +1,17 @@
+user will request users on the server
+server will respond w
+{users:
+[ user_id:
+	first_name:
+	last_name:
+	mobile_no:	
+
+]
+}
+
+Client will ask to friend user w id user_id
+server will create a row in table Follow
+user_id(session_user)<FOLLOW>user_id
+
+so when user(session_user) request to get news read by users he follow
+from read table get story_id where users are user_id

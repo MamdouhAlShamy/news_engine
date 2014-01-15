@@ -31,4 +31,9 @@ class UsersController < ApplicationController
  	end
   	redirect_to register_path
 	end
+	
+	def getUsers
+		@users = User.find(:all)
+		render :file => "users/users.json.erb", :content_type => 'application/json'
+	end
 end

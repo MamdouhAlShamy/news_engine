@@ -1,0 +1,12 @@
+{"users":
+             [ 
+               <% @users.each_with_index do |user,index| %>
+	           { "user_id": <%= user.id.to_json.html_safe %>
+	           , "first_name": <%= user.first_name.to_json.html_safe %>
+	           , "last_name": <%= user.last_name.to_json.html_safe %>
+	           , "mobile_no": <%= user.mobile_no.to_json.html_safe %>
+	           }<% unless index== @users.count - 1%>,
+    <% end %>
+    <% end %>
+              ]
+}
