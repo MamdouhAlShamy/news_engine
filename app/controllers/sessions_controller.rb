@@ -61,4 +61,11 @@ class SessionsController < ApplicationController
   	@read = Read.create(user_id: user_id, story_id: story_id)
 	render :file => "sessions/read.json.erb", :content_type => 'application/json'
   end
+  
+  def follow
+		me_id = session[:user_id]
+		user_id = params[:user_id]
+		@result = Follow.create(me: me_id, light: user_id)
+		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
+	end
 end

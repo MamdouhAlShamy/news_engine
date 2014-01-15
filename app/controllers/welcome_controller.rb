@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
 	end
 	
 	def index
-		@headlines = Story.find(:all)
+		@headlines = Story.find(:all).limit(100)
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
@@ -71,5 +71,12 @@ class WelcomeController < ApplicationController
 		@read = Read.create(user_id: user_id, story_id: story_id)
 		render :file => "sessions/read.json.erb", :content_type => 'application/json'
 		
+	end
+	
+	def follow
+		user_id = params[:user_id]
+		me_id = params[:iam]
+		@result = Follow.create(me: me_id, light: user_id)
+		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
 	end
 end
