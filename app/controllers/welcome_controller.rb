@@ -68,7 +68,7 @@ class WelcomeController < ApplicationController
 	def setStoryRead
 		story_id = params[:story_id]
 		user_id = params[:user_id]
-		Read.create(user_id: user_id, story_id: story_id)
+		@read = Read.create(user_id: user_id, story_id: story_id)
 		render :file => "sessions/read.json.erb", :content_type => 'application/json'
 		
 	end
