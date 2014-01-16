@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
 	end
 	
 	def index
-		@headlines = Story.where(["created_at > ?", DateTime.yesterday.iso8601]).limit(50)
+		@headlines = Story.where(["created_at > ?", DateTime.yesterday.iso8601]).order(created_at: :desc).limit(50)
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
@@ -38,7 +38,7 @@ class WelcomeController < ApplicationController
 
 	# getHeadlines from Category from DB
 	def getNewsOfCategory
-		@headlines = Story.where(["category_id = ?", params[:id]])
+		@headlines = Story.where(["category_id = ?", params[:id]]).order(created_at: :desc).limit(50)
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
@@ -61,7 +61,7 @@ class WelcomeController < ApplicationController
 	end
 	
 	def getRecentStories
-		@headlines = Story.where(["category_id = ?", params[:category_id]]).order(:created_at).limit(50)
+		@headlines = Story.where(["category_id = ?", params[:category_id]]).order(created_at: :desc).limit(50)
   		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
@@ -78,5 +78,11 @@ class WelcomeController < ApplicationController
 		me_id = params[:iam]
 		@result = Follow.create(me: me_id, light: user_id)
 		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
+	end
+	
+	def getStoiresReadByUsersIFollow
+		me_id = params[:iam]
+		users_i_follow = Follow.where(["me = ?", me_id])
+		puts user_i_follow
 	end
 end

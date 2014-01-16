@@ -13,9 +13,8 @@ require 'open-uri'
 def getStories(news_provider, provider_id, category_id) 
 	list_of_story_ids_added = []
 	z = Feedzirra::Feed.fetch_and_parse(news_provider)
-	puts news_provider
 	if defined? z.entries
-
+		puts news_provider
 		for  entry in z.entries
 
 			## Due to difference in urls

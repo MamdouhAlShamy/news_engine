@@ -17,8 +17,13 @@ so when user(session_user) request to get news read by users he follow
 from read table get story_id where users are user_id
 >
 Testing
-Debug in the scheduler
-user can request to see news stories that are read by users he follows
+Debug in the scheduler << DONE
+* user can request to see news stories that are read by users he follows
+	- Query userWhoIfollow
+	- Query all read stories by these users
+	- formate them in json
+	& will I return the headline seprate then the read by users wala all as one packaeg ?
+* list of users that he follow
 Sharing
 
 2morrow

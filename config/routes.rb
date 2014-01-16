@@ -48,15 +48,22 @@ News::Application.routes.draw do
 	# session dep
 	get 'readTestSession/:story_id' => 'sessions#setStoryRead'
 	
-	# SOCIAL
+	## SOCIAL
+	
 	# get all users on the system
 	get '/listUsers' => 'users#getUsers'
+	
 	# I want to fellow this guy
 	# session independent, # /follow/:user_id?iam=:iam
-	get '/follow/:user_id' => 'welcome#follow'
-	
+	get '/follow/:user_id' => 'welcome#follow'	
 	# session dependent, # /followSession/:user_id
 	get '/followSession/:user_id' => 'sessions#follow'
+	
+	# getStoiresReadByUsersIFollow 
+	# session independent # # /:user_id?iam=:iam
+	get 'getStoiresReadByUsersIFollow/:iam' => 'welcome#getStoiresReadByUsersIFollow'
+	# session dependent # /:user_id
+	get 'getStoiresReadByUsersIFollowSession/' => 'sessions#getStoiresReadByUsersIFollow'
 	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
