@@ -13,44 +13,49 @@ require 'open-uri'
 def getStories(news_provider, provider_id, category_id) 
 	list_of_story_ids_added = []
 	z = Feedzirra::Feed.fetch_and_parse(news_provider)
-	for  entry in z.entries
+	puts news_provider
+	if defined? z.entries
 
-		## Due to difference in urls
-		if provider_id == 2 # Youm7
-			story_id = entry.url.split(pattern="=")[-1]
-		else
-			story_id = entry.url.split(pattern="/")[-1]
-		end
+		for  entry in z.entries
+
+			## Due to difference in urls
+			if provider_id == 2 # Youm7
+				story_id = entry.url.split(pattern="=")[-1]
+			else
+				story_id = entry.url.split(pattern="/")[-1]
+			end
 		
-		## escape already existing story
-		if Story.exists?(:story_id => story_id) #>
-			next
-		end
+			## escape already existing story
+			if Story.exists?(:story_id => story_id) #>
+				next
+			end
 		
-		image_details_and_related = getImageUrlAndDetails(entry.url, provider_id, category_id, FALSE)
-		time = 	entry.published.to_s.split(" UTC")[0]
-		#puts story_id
-		#puts entry.published
+			image_details_and_related = getImageUrlAndDetails(entry.url, provider_id, category_id, FALSE)
+			time = 	entry.published.to_s.split(" UTC")[0]
+			#puts story_id
+			#puts entry.published
 	
-### To test the parser from Terminal		
-#		puts story_id
-#		puts entry.url
-#		puts entry.title
-#		puts image_details_and_related[0]	# image url
-#		puts image_details_and_related[1]	# details
-#		puts image_details_and_related[2]	# related 1
-#		puts image_details_and_related[3]	# related 2
-#		puts time
+	### To test the parser from Terminal		
+	#		puts story_id
+	#		puts entry.url
+	#		puts entry.title
+	#		puts image_details_and_related[0]	# image url
+	#		puts image_details_and_related[1]	# details
+	#		puts image_details_and_related[2]	# related 1
+	#		puts image_details_and_related[3]	# related 2
+	#		puts time
 	
-		## Save into DB
-		Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3]) #>
+			## Save into DB
+			Story.create(:story_id => story_id, :provider_id => provider_id, :category_id => category_id, :title => entry.title, :details => image_details_and_related[1], :img => image_details_and_related[0], :url => entry.url,:created_at => time, :updated_at => time, :relate1 => image_details_and_related[2], :relate2 => image_details_and_related[3]) #>
 	
 
-		list_of_story_ids_added.push(story_id)
-		#break	
+			list_of_story_ids_added.push(story_id)
+			#break	
+		end
+	
+	
+		return list_of_story_ids_added
 	end
-	
-	return list_of_story_ids_added
 end
 
 

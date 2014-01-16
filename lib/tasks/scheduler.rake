@@ -7,9 +7,6 @@ task :update_feed => :environment do
 	#WelcomeController.parse
 	@Categories  = Category.find(:all)
 	@Categories.each_with_index do |category|
-			if category.id == 2
-				next # problem w El masry El Youm Culture RSS
-			end
 			getStories(category.rss_url, category.provider_id, category.category_id)
 	end
   	puts "done."
