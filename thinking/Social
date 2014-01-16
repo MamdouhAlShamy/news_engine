@@ -15,5 +15,14 @@ user_id(session_user)<FOLLOW>user_id
 
 so when user(session_user) request to get news read by users he follow
 from read table get story_id where users are user_id
+>
+Testing
+Debug in the scheduler
+user can request to see news stories that are read by users he follows
+Sharing
+
+2morrow
+Data Mining
+Code Coverage
 
 

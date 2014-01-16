@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
 	end
 	
 	def index
-		@headlines = Story.find(:all).limit(100)
+		@headlines = Story.where(["created_at > ?", DateTime.yesterday.iso8601]).limit(50)
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
@@ -76,7 +76,7 @@ class WelcomeController < ApplicationController
 	def follow
 		user_id = params[:user_id]
 		me_id = params[:iam]
-		puts me_id
-		puts user_id
+		@result = Follow.create(me: me_id, light: user_id)
+		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
 	end
 end

@@ -11,7 +11,7 @@ class WelcomeController < ApplicationController
 	end
 	
 	def index
-		@headlines = Story.find(:all).limit(100)
+		@headlines = Story.where(["created_at > ?", DateTime.yesterday.iso8601]).limit(50)
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
