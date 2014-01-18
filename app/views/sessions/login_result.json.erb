@@ -1,4 +1,6 @@
-{"Login Status":<% if @user %>"Success"<% else %>Failure"
+{"Login Status":<% if @user %>"Success"
+"user_id": <%= @user.id.to_json.html_safe %>
+<% else %>"Failure"
 <% end %>
 }
 
