@@ -1,3 +1,4 @@
+require './app/controllers/core_methods.rb'
 class SessionsController < ApplicationController
   before_filter :check_login, :only => [:index]
 	def new
@@ -67,5 +68,10 @@ class SessionsController < ApplicationController
 		user_id = params[:user_id]
 		@result = Follow.create(me: me_id, light: user_id)
 		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
+	end
+	
+	def getStoiresReadByUsersIFollow
+		me_id = session[:user_id]
+		getStoiresReadByUsersIFollowCore(me_id)
 	end
 end

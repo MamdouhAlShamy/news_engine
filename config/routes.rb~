@@ -43,9 +43,9 @@ News::Application.routes.draw do
 	get 'user/updateCategory/:category_id' => 'welcome#getRecentStories'
 	
 	# mark as read
-	# Session independent mark as read
+	# Session independent mark as read, # /readTest/:user_id?story_id=:story_id
 	get 'readTest/:user_id' => 'welcome#setStoryRead'
-	# session dep
+	# session dep, # # /readTestSession/:story_id
 	get 'readTestSession/:story_id' => 'sessions#setStoryRead'
 	
 	## SOCIAL
@@ -60,10 +60,10 @@ News::Application.routes.draw do
 	get '/followSession/:user_id' => 'sessions#follow'
 	
 	# getStoiresReadByUsersIFollow 
-	# session independent # # /:user_id?iam=:iam
-	get 'getStoiresReadByUsersIFollow'/:iam => 'welcome#getStoiresReadByUsersIFollow'
+	# session independent # # /:me
+	get 'getStoriesReadByUsersFollowedByMe/:me' => 'welcome#getStoiresReadByUsersIFollow'
 	# session dependent # /:user_id
-	get 'getStoiresReadByUsersIFollowSession/' => 'sessions#getStoiresReadByUsersIFollow'
+	get 'getStoriesReadByUsersFollowedByMeSession/' => 'sessions#getStoiresReadByUsersIFollow'
 	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

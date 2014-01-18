@@ -1,4 +1,5 @@
 require './app/controllers/stories_parser.rb'
+require './app/controllers/core_methods.rb'
 
 class WelcomeController < ApplicationController
 	def details ##
@@ -81,8 +82,8 @@ class WelcomeController < ApplicationController
 	end
 	
 	def getStoiresReadByUsersIFollow
-		me_id = params[:iam]
-		users_i_follow = Follow.where(["me = ?", me_id])
-		puts user_i_follow
+		me_id = params[:me]
+		Welcome.getStoiresReadByUsersIFollowCore(me_id)
 	end
+	
 end

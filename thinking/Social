@@ -19,10 +19,13 @@ from read table get story_id where users are user_id
 Testing
 Debug in the scheduler << DONE
 * user can request to see news stories that are read by users he follows
-	- Query userWhoIfollow
-	- Query all read stories by these users
-	- formate them in json
-	& will I return the headline seprate then the read by users wala all as one packaeg ?
+	- Query userWhoIfollow << DONE
+	- Query all read stories by these users << DONE
+	- formate them in json << DONE
+	& will I return the headline seprate then the read by users wala all as one package ? << mobile should do that
+	- if the story read by the greatest number of users put first << DONE
+	- remove dublicated story from diff users << DONE
+	
 * list of users that he follow
 Sharing
 
