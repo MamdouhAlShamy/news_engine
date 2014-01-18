@@ -27,10 +27,15 @@ Debug in the scheduler << DONE
 	- remove dublicated story from diff users << DONE
 	
 * list of users that he follow
-Sharing
 
-2morrow
-Data Mining
+
+## Sharing
+create a model of "Share" user_id, story_id <<DONE
+create controller << DONE
+hit story as shared <<
+user can request to see news stories that are shared by users he follows
+pirorty stories shared first then read
+
 Code Coverage
 
 

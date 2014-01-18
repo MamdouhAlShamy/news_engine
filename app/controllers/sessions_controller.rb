@@ -74,4 +74,10 @@ class SessionsController < ApplicationController
 		me_id = session[:user_id]
 		getStoiresReadByUsersIFollowCore(me_id)
 	end
+	
+	def setStoryAsShared
+		user_id = session[:user_id]
+		story_id = params[:story_id]
+		setStoryAsSharedCore(user_id, story_id)
+	end
 end

@@ -65,6 +65,12 @@ News::Application.routes.draw do
 	# session dependent # /:user_id
 	get 'getStoriesReadByUsersFollowedByMeSession/' => 'sessions#getStoiresReadByUsersIFollow'
 	
+	# mark story shared by user
+	# Session independent mark as shared, # /shared/:user_id?story_id=:story_id
+	get 'shared/:user_id' => 'social#setStoryAsShared'
+	# Session dependent, # # /sharedSession/:story_id
+	get 'sharedSession/:story_id' => 'sessions#setStoryAsShared'
+	
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
