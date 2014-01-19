@@ -85,3 +85,15 @@ def setStoryAsSharedCore(user_id, story_id)
 	@share = Share.create(user_id: user_id, story_id: story_id)
 	render :file => "social/share.json.erb", :content_type => 'application/json'
 end
+
+def getUsersrFollowedByMeCore(me_id)
+	@users_i_follow = Follow.select("light").where(["me = ?", me_id])
+	@users = []
+	for @user_i_follow in @users_i_follow
+		puts @user_i_follow.class.name
+		@user = User.where(["id = ?", @user_i_follow.light])[0]
+		puts @user.class.name
+		@users << @user
+	end	
+	render :file => "users/users.json.erb", :content_type => 'application/json'
+end

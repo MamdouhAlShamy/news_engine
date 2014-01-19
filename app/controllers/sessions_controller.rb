@@ -85,4 +85,9 @@ class SessionsController < ApplicationController
 		me_id = session[:user_id]
 		getStoriesSharedByUsersIFollowCore(me_id)
 	end
+	
+	def getUsersrFollowedByMe
+		me_id = session[:user_id]
+		getUsersrFollowedByMeCore(me_id)
+	end
 end

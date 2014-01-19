@@ -13,5 +13,10 @@ class SocialController < ApplicationController
 		me_id = params[:me]
 		getStoriesSharedByUsersIFollowCore(me_id)
 	end
+	
+	def getUsersrFollowedByMe
+		me_id = params[:me]
+		getUsersrFollowedByMeCore(me_id)
+	end
 
 end

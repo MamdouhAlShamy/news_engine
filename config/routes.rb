@@ -53,16 +53,23 @@ News::Application.routes.draw do
 	# get all users on the system
 	get '/listUsers' => 'users#getUsers'
 	
+	# get list of users followed by me
+	# session independent, # /listUsersFollowedByMe/:me
+	get '/listUsersFollowedByMe/:me' => 'social#getUsersrFollowedByMe'
+	# session dependent, # /listUsersFollowedByMeSession
+	get '/listUsersFollowedByMeSession/' => 'sessions#getUsersrFollowedByMe'
+	
+	
 	# I want to follow this guy
 	# session independent, # /follow/:user_id?iam=:iam
 	get '/follow/:user_id' => 'welcome#follow'	
 	# session dependent, # /followSession/:user_id
 	get '/followSession/:user_id' => 'sessions#follow'
 	
-	# getStoiresReadByUsersIFollow 
+	# getStoriesReadByUsersIFollow 
 	# session independent # # /getStoriesReadByUsersFollowedByMe/:me
 	get 'getStoriesReadByUsersFollowedByMe/:me' => 'welcome#getStoriesReadByUsersIFollow'
-	# session dependent # /:user_id
+	# session dependent #
 	get 'getStoriesReadByUsersFollowedByMeSession/' => 'sessions#getStoriesReadByUsersIFollow'
 	
 	# mark story shared by user
@@ -72,9 +79,9 @@ News::Application.routes.draw do
 	get 'sharedSession/:story_id' => 'sessions#setStoryAsShared'
 	
 	# getStoiresSharedByUsersIFollow 
-	# session independent # # /getStoiresSharedByUsersIFollow/:me
+	# session independent # # /getStoriesSharedByUsersIFollow/:me
 	get 'getStoriesSharedByUsersIFollow/:me' => 'social#getStoriesSharedByUsersIFollow'
-	# session dependent # /:user_id
+	# session dependent #
 	get 'getStoriesSharedByUsersIFollowSession/' => 'sessions#getStoriesSharedByUsersIFollow'
 	
   # The priority is based upon order of creation: first created -> highest priority.
