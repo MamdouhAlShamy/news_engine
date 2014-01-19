@@ -81,9 +81,9 @@ class WelcomeController < ApplicationController
 		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
 	end
 	
-	def getStoiresReadByUsersIFollow
+	def getStoriesSharedByUsersIFollow
 		me_id = params[:me]
-		Welcome.getStoiresReadByUsersIFollowCore(me_id)
+		getStoriesSharedByUsersIFollow(me_id)
 	end
 	
 end

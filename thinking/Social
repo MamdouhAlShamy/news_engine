@@ -32,8 +32,8 @@ Debug in the scheduler << DONE
 ## Sharing
 create a model of "Share" user_id, story_id <<DONE
 create controller << DONE
-hit story as shared <<
-user can request to see news stories that are shared by users he follows
+hit story as shared << DONE
+user can request to see news stories that are shared by users he follows <<
 pirorty stories shared first then read
 
 Code Coverage

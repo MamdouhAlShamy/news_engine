@@ -70,14 +70,19 @@ class SessionsController < ApplicationController
 		render :file => "sessions/follow.json.erb", :content_type => 'application/json'
 	end
 	
-	def getStoiresReadByUsersIFollow
+	def getStoriesReadByUsersIFollow
 		me_id = session[:user_id]
-		getStoiresReadByUsersIFollowCore(me_id)
+		getStoriesReadByUsersIFollowCore(me_id)
 	end
 	
 	def setStoryAsShared
 		user_id = session[:user_id]
 		story_id = params[:story_id]
 		setStoryAsSharedCore(user_id, story_id)
+	end
+	
+	def getStoriesSharedByUsersIFollow
+		me_id = session[:user_id]
+		getStoriesSharedByUsersIFollowCore(me_id)
 	end
 end
