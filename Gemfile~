@@ -5,9 +5,15 @@ ruby "1.9.3"
 gem 'rails', '4.0.1'
 
 # Use postgresql as the database for Active Record
+group :production, :staging do
+  gem "pg"
+end
 gem 'pg'
-gem 'sqlite3' # for local testing env 
 
+group :development, :test do
+	gem 'sqlite3' # for local testing env 
+	gem 'simplecov'
+end
 gem 'protected_attributes'
 
 # Use SCSS for stylesheets

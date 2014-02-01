@@ -51,7 +51,7 @@ class WelcomeController < ApplicationController
 #		, :id, requested_priority[0],requested_priority[1],requested_priority[2]
 		#Story.connection.execute("SET @cat_id = 0;")
 		#@headlines = Story.find_by_sql(%Q{SELECT * FROM stories where category_id=2 ORDER BY case provider_id when 3 then 1 when 2 then 2 when 1 then 3 else 4 end; })
-		sql_string = "SELECT * FROM stories WHERE stories.category_id = #{cat} ORDER BY case provider_id when #{requested_priority[0]} then 1 when #{requested_priority[1]} then 2 when #{requested_priority[2]} then 3 else 4 end;"
+		sql_string = "SELECT * FROM stories WHERE stories.category_id = #{cat} ORDER BY case provider_id when #{requested_priority[0]} then 1 when #{requested_priority[1]} then 2 when #{requested_priority[2]} then 3 else 4 end, created_at DESC Limit 50;"
 		@headlines = Story.find_by_sql(sql_string)
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end

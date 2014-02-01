@@ -12,6 +12,7 @@ gem 'pg'
 
 group :development, :test do
 	gem 'sqlite3' # for local testing env 
+	gem 'simplecov'
 end
 gem 'protected_attributes'
 
