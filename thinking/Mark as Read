@@ -9,3 +9,8 @@ http://localhost:3000/readTestSession/<story_id>
 http://localhost:3000/readTest/<user_id>?story_id=<story_id>
 - STORE in DB>DONE
 - how to request if 
+
+How to view for each story in headlines is it read by the user or not
+I have two problems 
+	- how to join the result of stories w reads table 
+	- how to view read stories 

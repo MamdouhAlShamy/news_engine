@@ -20,9 +20,11 @@ def getStoriesReadByUsersIFollowCore(me_id)
 	@headlines = []
 	#puts @headlines.class.name
 	for story_id in sorted_read_story_ids
-		@story = Story.where(["story_id = ?", story_id.to_s])[0]
-		#puts @story.class.name
-		@headlines << @story
+		if Story.exists?(:story_id => story_id.to_s) # to not append already deleted stories from db
+			@story = Story.where(["story_id = ?", story_id.to_s])[0]
+			#puts @story.class.name
+			@headlines << @story
+		end
 	end
 	#puts @headlines.class.name
 	#for @h in @headlines
@@ -54,9 +56,12 @@ def getStoriesSharedByUsersIFollowCore(me_id)
 	@headlines = []
 	#puts @headlines.class.name
 	for story_id in sorted_shared_story_ids
-		@story = Story.where(["story_id = ?", story_id.to_s])[0]
-		#puts @story.class.name
-		@headlines << @story
+		if Story.exists?(:story_id => story_id.to_s) # to not append already deleted stories from db
+			@story = Story.where(["story_id = ?", story_id.to_s])[0]
+			#puts @story
+			@headlines << @story
+		end
+			
 	end
 	
 	render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
