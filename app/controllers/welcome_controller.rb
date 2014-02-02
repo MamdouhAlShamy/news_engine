@@ -48,11 +48,28 @@ class WelcomeController < ApplicationController
 		requested_priority = params[:priority].split(",")
 		puts requested_priority
 		cat = params[:category_id]
+		@headlines = []
 #		, :id, requested_priority[0],requested_priority[1],requested_priority[2]
 		#Story.connection.execute("SET @cat_id = 0;")
+		
+		# OLD WAY
+		#sql_string = "SELECT * FROM stories WHERE stories.category_id = #{cat} ORDER BY case provider_id when #{requested_priority[0]} then 1 when #{requested_priority[1]} then 2 when #{requested_priority[2]} then 3 else 4 end, created_at DESC Limit 50;"
 		#@headlines = Story.find_by_sql(%Q{SELECT * FROM stories where category_id=2 ORDER BY case provider_id when 3 then 1 when 2 then 2 when 1 then 3 else 4 end; })
-		sql_string = "SELECT * FROM stories WHERE stories.category_id = #{cat} ORDER BY case provider_id when #{requested_priority[0]} then 1 when #{requested_priority[1]} then 2 when #{requested_priority[2]} then 3 else 4 end, created_at DESC Limit 50;"
-		@headlines = Story.find_by_sql(sql_string)
+		#@headlines = Story.find_by_sql(sql_string)
+		
+		# NEW WAY
+		for i in requested_priority
+			sql_string = "SELECT * FROM stories WHERE stories.category_id = #{cat} and provider_id = #{i}
+ORDER By created_at DESC limit 20;"
+		 	#@story = Story.find_by_sql(sql_string)
+		 	@story = Story.where(["category_id = #{cat} and provider_id = #{i}"]).order(created_at: :desc).limit(20)
+		 	puts @story.class.name
+			for @s in @story
+				@headlines << @s
+			end
+		end
+
+		
 		render :file => "welcome/headlines.json.erb", :content_type => 'application/json'
 	end
 	
